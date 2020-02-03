@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>C语言重点理论整理 - WangZun233</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="wangzun233,"> 
+    <meta name="description" content="wangzun233,　　今天把最后的两个视频看完了，整理了一下最后的重点和重要的部分。
+什么叫分配内存？什么叫释放内存？　　1.操作系统把某块内存空间的使用权利分配给程序叫做分配内存。　　2.操作系统把分配给该程序的内,"> 
+    <meta name="author" content="wangzun233"> 
+    <link rel="alternative" href="atom.xml" title="WangZun233" type="application/atom+xml"> 
+    <link rel="icon" href="/img/ttbb.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">WangZun233</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="https://wangzun233.top"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">C语言重点理论整理</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">C语言重点理论整理</h1>
+        <div class="stuff">
+            <span>十二月 22, 2019</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/C%E8%AF%AD%E8%A8%80/" rel="tag">C语言</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <p>　　今天把最后的两个视频看完了，整理了一下最后的重点和重要的部分。</p>
+<h1 id="什么叫分配内存？什么叫释放内存？"><a href="#什么叫分配内存？什么叫释放内存？" class="headerlink" title="什么叫分配内存？什么叫释放内存？"></a>什么叫分配内存？什么叫释放内存？</h1><p>　　<strong>1.操作系统把某块内存空间的使用权利分配给程序叫做分配内存。<br>　　2.操作系统把分配给该程序的内存空间的使用权力回收该程序就不能再使用这一块内存空间叫做释放内存。<br>　　注意事项：释放内存不是把该内存的内容清零。</strong></p>
+<h1 id="变量为什么不能初始化？"><a href="#变量为什么不能初始化？" class="headerlink" title="变量为什么不能初始化？"></a>变量为什么不能初始化？</h1><p>　　不初始化变量通常是一个垃圾值。</p>
+<h1 id="说明系统是如何执行-int-5；-这个语句？"><a href="#说明系统是如何执行-int-5；-这个语句？" class="headerlink" title="说明系统是如何执行　int  =  5；　这个语句？"></a>说明系统是如何执行　int  =  5；　这个语句？</h1><p>　　第1步，编译软件请求操作系统为　i　分配存储空间。<br>　　第2步，操作系统会在内存中寻找一块空闲的区域，把该区域当做　i　来使用。<br>　　第3步，编译软件会把　i　这一块空闲区域关联起来，对字母　i　的操作就是对这块空闲区域的操作。<br>　　第4步，把　5　存储到字母　i　所关联的内存区域中。<br>　　注意事项：所谓内存区域也就是内存的一块存储单元。</p>
+<h1 id="什么是指针？什么是地址？什么是指针变量？三者的关系？"><a href="#什么是指针？什么是地址？什么是指针变量？三者的关系？" class="headerlink" title="什么是指针？什么是地址？什么是指针变量？三者的关系？"></a>什么是指针？什么是地址？什么是指针变量？三者的关系？</h1><p>　　1.指针=地址<br>　　2.地址是内存单元的编号<br>　　3.指针变量是存放内存单元编号的变量</p>
+<h1 id="静态和动态变量的异同"><a href="#静态和动态变量的异同" class="headerlink" title="静态和动态变量的异同"></a>静态和动态变量的异同</h1><p>　　1.相同：都需要分配内存。<br>　　2.不同：<br>　　　　静态内存是由系统自动分配，由系统自动释放。<br>　　　　静态内存是在栈分配。<br>　　　　动态内存是由人手动分配，手动释放(free(q))。<br>　　　　动态内存是在堆分配，可以跨函数使用。</p>
+<h1 id="二进制全部为0的含义"><a href="#二进制全部为0的含义" class="headerlink" title="二进制全部为0的含义"></a>二进制全部为0的含义</h1><p>　　1.数值为0<br>　　2.字符串“\0”<br>　　3.空指针NULL<br>　　<strong>NULL本质也是0，而这个0不代表数字零，而是表示内存单元的编号零,计算机中规定了以零为编号的存储单元的内容不可读,不可写。</strong></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='true'
+        data-ci='c4827e9df2fa1d1f9384'
+        data-cs='92e45193764e93e5b996eb7ecba2b93e3b0c45c3'
+        data-r='wangzun233.github.io'
+        data-o='wangzun233'
+        data-a='wangzun233'
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
