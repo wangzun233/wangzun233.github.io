@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>WangZun233</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://wangzun233.top/"/>
+  <updated>2020-02-25T08:52:01.127Z</updated>
+  <id>https://wangzun233.top/</id>
+  
+  <author>
+    <name>wangzun233</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基础算法总结</title>
+    <link href="https://wangzun233.top/2020/02/25/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/"/>
+    <id>https://wangzun233.top/2020/02/25/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</id>
+    <published>2020-02-25T08:39:04.000Z</published>
+    <updated>2020-02-25T08:52:01.127Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;学了将近一个月的基础算法，总结下代顺便码试试typora。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;排序&quot;&gt;&lt;a href=&quot;#排序&quot; class=&quot;headerlink&quot; title=&quot;排序&quot;&gt;&lt;/a&gt;排序&lt;/h1&gt;&lt;h2 id=&quot;01快速排序&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="学习日记" scheme="https://wangzun233.top/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="C语言算法" scheme="https://wangzun233.top/tags/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>lsky 图库</title>
+    <link href="https://wangzun233.top/2020/02/09/lsky-%E5%9B%BE%E5%BA%93/"/>
+    <id>https://wangzun233.top/2020/02/09/lsky-%E5%9B%BE%E5%BA%93/</id>
+    <published>2020-02-09T04:30:43.000Z</published>
+    <updated>2020-02-09T05:06:02.765Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;　　困在老家想着做一个图库，发现了一个很棒的开源图库正好有台闲置小水管。&lt;br&gt;　　项目地址：&lt;a href=&quot;https://www.lsky.pro/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="学习日记" scheme="https://wangzun233.top/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开学第十三周-周记（END）</title>
+    <link href="https://wangzun233.top/2020/01/08/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%8D%81%E4%B8%89%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
+    <id>https://wangzun233.top/2020/01/08/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%8D%81%E4%B8%89%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
+    <published>2020-01-08T04:13:07.000Z</published>
+    <updated>2020-02-03T06:29:38.577Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;2019.12.30—2019.1.8&lt;br&gt;　　这是从最后一周到我回家的周记&lt;br&gt;　　这是在学校的最后一周了，最后一周还是蛮充实和舒适的快考试的最后几天基本上每天一节课其他时间用来复习、健身、玩游戏。&lt;br&gt;　　在周五成立了一个C语言和高数的突击补习小组，我
+        
+      
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2019 - - - 大事记</title>
+    <link href="https://wangzun233.top/2020/01/01/2019-%E5%A4%A7%E4%BA%8B%E8%AE%B0/"/>
+    <id>https://wangzun233.top/2020/01/01/2019-%E5%A4%A7%E4%BA%8B%E8%AE%B0/</id>
+    <published>2020-01-01T02:20:17.000Z</published>
+    <updated>2020-01-01T02:23:07.165Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 拿到驾照&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 开始理财&lt;/li&gt;
+&lt;li&gt;&lt;input
+        
+      
+    
+    </summary>
+    
+    
+      <category term="总结" scheme="https://wangzun233.top/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开学第十二周-周记</title>
+    <link href="https://wangzun233.top/2019/12/30/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
+    <id>https://wangzun233.top/2019/12/30/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
+    <published>2019-12-30T14:43:54.000Z</published>
+    <updated>2019-12-30T15:44:47.841Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;2019.12.23—2019.12.29&lt;br&gt;　　越要考试越懒惰，我说为什么这两周晚上时间变少了是因为天天晚上在西瓜视频答题赚了小二百了这几周饭钱是有了着落。还买了一个游戏在epic平台卖的毕竟太香了《哈迪斯》又是一款魂游戏，爆肝十小时终于没有在半路倒下一命
+        
+      
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开学第十一周-周记</title>
+    <link href="https://wangzun233.top/2019/12/23/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%8D%81%E4%B8%80%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
+    <id>https://wangzun233.top/2019/12/23/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%8D%81%E4%B8%80%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
+    <published>2019-12-23T14:30:40.000Z</published>
+    <updated>2019-12-23T15:19:14.313Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;2019.12.16—2019.12.22&lt;br&gt;　　承认是自己的懒癌犯了，在昨天打算写完笔记再写周记，然后就没有然后了。拖到了现在，来回顾一下这一周的事情。&lt;br&gt;　　周一的时候C Primer
+        
+      
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言重点理论整理</title>
+    <link href="https://wangzun233.top/2019/12/22/C%E8%AF%AD%E8%A8%80%E9%87%8D%E7%82%B9%E7%90%86%E8%AE%BA%E6%95%B4%E7%90%86/"/>
+    <id>https://wangzun233.top/2019/12/22/C%E8%AF%AD%E8%A8%80%E9%87%8D%E7%82%B9%E7%90%86%E8%AE%BA%E6%95%B4%E7%90%86/</id>
+    <published>2019-12-22T14:04:52.000Z</published>
+    <updated>2019-12-22T14:12:05.160Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;　　今天把最后的两个视频看完了，整理了一下最后的重点和重要的部分。&lt;/p&gt;
+&lt;h1 id=&quot;什么叫分配内存？什么叫释放内存？&quot;&gt;&lt;a href=&quot;#什么叫分配内存？什么叫释放内存？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C语言" scheme="https://wangzun233.top/categories/C%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="C语言" scheme="https://wangzun233.top/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>next主题优化</title>
+    <link href="https://wangzun233.top/2019/12/17/next%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/"/>
+    <id>https://wangzun233.top/2019/12/17/next%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</id>
+    <published>2019-12-17T14:38:53.000Z</published>
+    <updated>2019-12-17T15:13:14.200Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;　　今天发现百度seo掉了，好久没搞过seo了百度一波教程抄手就干。&lt;/p&gt;
+&lt;h1 id=&quot;1-SEO优化&quot;&gt;&lt;a href=&quot;#1-SEO优化&quot; class=&quot;headerlink&quot; title=&quot;1. SEO优化&quot;&gt;&lt;/a&gt;1. SEO优化&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="学习日记" scheme="https://wangzun233.top/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开学第十周-周记</title>
+    <link href="https://wangzun233.top/2019/12/16/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%8D%81%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
+    <id>https://wangzun233.top/2019/12/16/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%8D%81%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
+    <published>2019-12-16T09:21:39.000Z</published>
+    <updated>2019-12-23T15:17:31.046Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;2019.12.9—2019.12.15&lt;br&gt;　　这一周确定了回家的时间也成功的抢到了回家的车票可以安心复习准备期末考试。&lt;br&gt;　　在双十二的时候把自己心仪已久的C Primer
+        
+      
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开学第九周-周记</title>
+    <link href="https://wangzun233.top/2019/12/09/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%B9%9D%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
+    <id>https://wangzun233.top/2019/12/09/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%B9%9D%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
+    <published>2019-12-09T06:03:49.000Z</published>
+    <updated>2019-12-16T09:43:08.963Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;2019.12.2—2019.12.8&lt;br&gt;　　这一周很充实原因在于有压力了，压力很大。&lt;br&gt;　　还是先以时间顺序来讲在5号的早晨去跑操下雪了，吃完早饭看新闻发现刚刚地震了……表示没有一点感觉，果然是大震跑不了，小震不用跑。开玩笑的该跑还是要跑的不经意间又经
+        
+      
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开学第八周-周记</title>
+    <link href="https://wangzun233.top/2019/12/01/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%85%AB%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
+    <id>https://wangzun233.top/2019/12/01/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%85%AB%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
+    <published>2019-12-01T14:11:21.000Z</published>
+    <updated>2019-12-09T06:28:21.409Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;2019.11.25—2019.12.1&lt;br&gt;　　这一周在周一参加了一个”海报大赛”上台解说创意和思路,自我感觉表现良好得了一个优秀奖,虽然不是一二三但是比没有强,hhh,怎么说呢不太满意.&lt;br&gt;　　在摄影课上老师讲解了上一周大家外出摄影的优缺点和细节,很多
+        
+      
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开学第七周-周记</title>
+    <link href="https://wangzun233.top/2019/11/24/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%B8%83%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
+    <id>https://wangzun233.top/2019/11/24/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%B8%83%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
+    <published>2019-11-24T14:02:46.000Z</published>
+    <updated>2019-12-09T06:29:57.234Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;2019.11.18-2019.11.24&lt;br&gt;　　这一周发现了一个好软件番茄ToDo找到可以实现我学习的数据化还顺便可以在学习的时候不玩手机,非常好用.还发现了蚂蚁森林出新树马上加入合种开始种树,种了一颗侧柏.&lt;br&gt;　　双十一买的零食也到了.天天吃好吃点的
+        
+      
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开学第六周-周记</title>
+    <link href="https://wangzun233.top/2019/11/17/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%85%AD%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
+    <id>https://wangzun233.top/2019/11/17/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%85%AD%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
+    <published>2019-11-17T14:41:11.000Z</published>
+    <updated>2019-12-09T06:29:25.003Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;2019.11.11—2019.11.17&lt;br&gt;　　这一周很忙,最忙的的两件事情还赶在了同一天.&lt;br&gt;　　周四上午心理课表演我的小组在前一天演出之前确定了演出人员和大致剧情,在表演的时候超长发挥老师的给出了9分的好成绩.&lt;br&gt;　　下午是语文朗诵这个我准备的
+        
+      
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开学第五周-周记</title>
+    <link href="https://wangzun233.top/2019/11/10/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%BA%94%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
+    <id>https://wangzun233.top/2019/11/10/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%BA%94%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
+    <published>2019-11-10T10:40:19.000Z</published>
+    <updated>2019-12-09T06:31:15.131Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;2019.11.4—2019.11.10&lt;br&gt;　　第五周成功的体验了一把将近六天没有手机的生活,感觉良好先说说缺点:找人靠随缘,接电话随缘,早晨没有闹铃起不来,收到的信息很不及时.优点睡得早,起床快闲暇时间没有手机就看书或者搞点小东西.感觉没有手机的生活很稳.
+        
+      
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开学第四周---周记</title>
+    <link href="https://wangzun233.top/2019/11/04/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%9B%9B%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
+    <id>https://wangzun233.top/2019/11/04/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%9B%9B%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
+    <published>2019-11-04T14:34:39.000Z</published>
+    <updated>2019-12-09T06:30:55.336Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;2019.10.28—2019.10.11.3&lt;br&gt;　　第四周比较惨先是体育课测试跑步时吧把饭卡丢了周六骑行比赛又把手机屏幕摔碎了这后半周非常的丧气心情非常低落导致我一直不想写拖到了周一晚上.很难受.&lt;br&gt;　　说说收获吧.体测跑一千米跑了4分22秒已经很不错
+        
+      
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开学第三周---周记</title>
+    <link href="https://wangzun233.top/2019/10/27/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%B8%89%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
+    <id>https://wangzun233.top/2019/10/27/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%B8%89%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
+    <published>2019-10-27T12:23:53.000Z</published>
+    <updated>2019-12-14T03:53:20.711Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;2019.10.21—2019.10.27&lt;br&gt;　　第三周给自己的天气站造了一个外壳肝了4个多小时积木拼的手疼,还做了一个手机支架花了3个多小时有了积木真是想到什么拼什么.而且都还很不错我还是蛮心灵手巧的.&lt;br&gt;　　健身方面每周休息两天周二和周三.这三周体重
+        
+      
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开学第二周---周记</title>
+    <link href="https://wangzun233.top/2019/10/20/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
+    <id>https://wangzun233.top/2019/10/20/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
+    <published>2019-10-20T12:40:31.000Z</published>
+    <updated>2019-12-16T09:53:11.804Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;2019.10.14—2019.10.20&lt;br&gt;　　第二周在在健身上面有了质的飞跃两周的坚持迎来了第一个成果有二头肌了但这一周有两天没去一天是做皮试,还有一天是满课.以后除了满课的那一天争取天天都去.&lt;br&gt;　　参加了一次社团修车培训学习如何拆车补胎再装好以后
+        
+      
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开学第一周---周记</title>
+    <link href="https://wangzun233.top/2019/10/13/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
+    <id>https://wangzun233.top/2019/10/13/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
+    <published>2019-10-13T02:02:29.000Z</published>
+    <updated>2019-12-09T06:31:39.485Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;2019.10.7—2019.10.13&lt;br&gt;　　正式开学第一周,非常非常的充实身体上:每天都会去健身房锻炼身体大约一个半小时到两个小时每次都是没课去的所以时间比较紧张,每隔一天早起跑步跑5圈一定要坚持下去.&lt;br&gt;　　美食上:去了一趟华北理工的食堂要了碗酸辣
+        
+      
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言scanf_s踩坑</title>
+    <link href="https://wangzun233.top/2019/10/11/C%E8%AF%AD%E8%A8%80scanf-s%E8%B8%A9%E5%9D%91/"/>
+    <id>https://wangzun233.top/2019/10/11/C%E8%AF%AD%E8%A8%80scanf-s%E8%B8%A9%E5%9D%91/</id>
+    <published>2019-10-11T13:45:26.000Z</published>
+    <updated>2019-12-22T14:09:35.884Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;2019.10.11&lt;br&gt;　　跟着书上的代码一直报错,经过百度 谷歌的查询知道&lt;code&gt;scanf&lt;/code&gt;在visual
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C语言" scheme="https://wangzun233.top/categories/C%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="C语言" scheme="https://wangzun233.top/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pyhon入门小结</title>
+    <link href="https://wangzun233.top/2019/10/04/pyhon%E5%85%A5%E9%97%A8%E5%B0%8F%E7%BB%93/"/>
+    <id>https://wangzun233.top/2019/10/04/pyhon%E5%85%A5%E9%97%A8%E5%B0%8F%E7%BB%93/</id>
+    <published>2019-10-04T12:29:45.000Z</published>
+    <updated>2019-12-16T09:48:32.653Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2019.10.4&lt;/strong&gt;&lt;br&gt;　　在宿舍太闲想着复习下前面的知识,就花了大半天做了一个基础的复习.太怠慢了.&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+    
+      <category term="学习日记" scheme="https://wangzun233.top/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+</feed>
