@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wangzun233.top/"/>
-  <updated>2020-03-30T11:39:33.762Z</updated>
+  <updated>2020-04-12T14:10:36.889Z</updated>
   <id>https://wangzun233.top/</id>
   
   <author>
@@ -15,6 +15,153 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法-单链表</title>
+    <link href="https://wangzun233.top/2020/04/15/%E7%AE%97%E6%B3%95-%E5%8D%95%E9%93%BE%E8%A1%A8/"/>
+    <id>https://wangzun233.top/2020/04/15/%E7%AE%97%E6%B3%95-%E5%8D%95%E9%93%BE%E8%A1%A8/</id>
+    <published>2020-04-15T12:39:04.000Z</published>
+    <updated>2020-04-12T14:10:36.889Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;单链表&quot;&gt;&lt;a href=&quot;#单链表&quot; class=&quot;headerlink&quot; title=&quot;单链表&quot;&gt;&lt;/a&gt;单链表&lt;/h3&gt;&lt;p&gt;实现一个单链表，链表初始为空，支持三种操作：&lt;/p&gt;
+&lt;p&gt;(1) 向链表头插入一个数；&lt;/p&gt;
+&lt;p&gt;(2)
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://wangzun233.top/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数据结构" scheme="https://wangzun233.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法-单调栈！</title>
+    <link href="https://wangzun233.top/2020/04/12/%E7%AE%97%E6%B3%95-%E5%8D%95%E8%B0%83%E6%A0%88%EF%BC%81/"/>
+    <id>https://wangzun233.top/2020/04/12/%E7%AE%97%E6%B3%95-%E5%8D%95%E8%B0%83%E6%A0%88%EF%BC%81/</id>
+    <published>2020-04-12T14:14:40.000Z</published>
+    <updated>2020-04-12T14:14:50.930Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;单调栈&quot;&gt;&lt;a href=&quot;#单调栈&quot; class=&quot;headerlink&quot; title=&quot;单调栈&quot;&gt;&lt;/a&gt;单调栈&lt;/h3&gt;&lt;p&gt;给定一个长度为N的整数数列，输出每个数左边第一个比它小的数，如果不存在则输出-1。&lt;/p&gt;
+&lt;h4 id=&quot;输入格式&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法-模拟队列</title>
+    <link href="https://wangzun233.top/2020/04/12/%E7%AE%97%E6%B3%95-%E6%A8%A1%E6%8B%9F%E9%98%9F%E5%88%97/"/>
+    <id>https://wangzun233.top/2020/04/12/%E7%AE%97%E6%B3%95-%E6%A8%A1%E6%8B%9F%E9%98%9F%E5%88%97/</id>
+    <published>2020-04-12T14:12:55.000Z</published>
+    <updated>2020-04-12T14:13:41.094Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;模拟队列&quot;&gt;&lt;a href=&quot;#模拟队列&quot; class=&quot;headerlink&quot; title=&quot;模拟队列&quot;&gt;&lt;/a&gt;模拟队列&lt;/h3&gt;&lt;p&gt;实现一个队列，队列初始为空，支持四种操作：&lt;/p&gt;
+&lt;p&gt;(1) “push x” –
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://wangzun233.top/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数据结构" scheme="https://wangzun233.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法-模拟栈</title>
+    <link href="https://wangzun233.top/2020/04/12/%E7%AE%97%E6%B3%95-%E6%A8%A1%E6%8B%9F%E6%A0%88/"/>
+    <id>https://wangzun233.top/2020/04/12/%E7%AE%97%E6%B3%95-%E6%A8%A1%E6%8B%9F%E6%A0%88/</id>
+    <published>2020-04-12T14:12:00.000Z</published>
+    <updated>2020-04-12T14:12:32.841Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;模拟栈&quot;&gt;&lt;a href=&quot;#模拟栈&quot; class=&quot;headerlink&quot; title=&quot;模拟栈&quot;&gt;&lt;/a&gt;模拟栈&lt;/h3&gt;&lt;p&gt;实现一个栈，栈初始为空，支持四种操作：&lt;/p&gt;
+&lt;p&gt;(1) “push x” – 向栈顶插入一个数x；&lt;/p&gt;
+&lt;p&gt;(2)
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://wangzun233.top/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数据结构" scheme="https://wangzun233.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法-双链表</title>
+    <link href="https://wangzun233.top/2020/04/12/%E7%AE%97%E6%B3%95-%E5%8F%8C%E9%93%BE%E8%A1%A8/"/>
+    <id>https://wangzun233.top/2020/04/12/%E7%AE%97%E6%B3%95-%E5%8F%8C%E9%93%BE%E8%A1%A8/</id>
+    <published>2020-04-12T14:10:51.000Z</published>
+    <updated>2020-04-12T14:11:35.426Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;双链表&quot;&gt;&lt;a href=&quot;#双链表&quot; class=&quot;headerlink&quot; title=&quot;双链表&quot;&gt;&lt;/a&gt;双链表&lt;/h3&gt;&lt;p&gt;实现一个双链表，双链表初始为空，支持5种操作：&lt;/p&gt;
+&lt;p&gt;(1) 在最左侧插入一个数；&lt;/p&gt;
+&lt;p&gt;(2)
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://wangzun233.top/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数据结构" scheme="https://wangzun233.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>竞赛c++基础知识</title>
@@ -49,11 +196,11 @@
   </entry>
   
   <entry>
-    <title>基础算法总结</title>
+    <title>算法-基础算法整合</title>
     <link href="https://wangzun233.top/2020/02/25/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/"/>
     <id>https://wangzun233.top/2020/02/25/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</id>
     <published>2020-02-25T08:39:04.000Z</published>
-    <updated>2020-02-25T08:52:01.127Z</updated>
+    <updated>2020-04-12T08:55:51.760Z</updated>
     
     <summary type="html">
     
@@ -63,20 +210,19 @@
         
           &lt;ul&gt;
 &lt;li&gt;学了将近一个月的基础算法，总结下代顺便码试试typora。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;排序&quot;&gt;&lt;a href=&quot;#排序&quot; class=&quot;headerlink&quot; title=&quot;排序&quot;&gt;&lt;/a&gt;排序&lt;/h1&gt;&lt;h2 id=&quot;01快速排序&quot;&gt;&lt;a
+&lt;li&gt;感觉这么写有些太缭乱了，下回试着分开吧。&lt;h1 id=&quot;排序&quot;&gt;&lt;a href=&quot;#排序&quot; class=&quot;headerlink&quot;
         
       
     
     </summary>
     
     
-      <category term="学习日记" scheme="https://wangzun233.top/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/"/>
+      <category term="算法" scheme="https://wangzun233.top/categories/%E7%AE%97%E6%B3%95/"/>
     
     
       <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="C语言算法" scheme="https://wangzun233.top/tags/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/"/>
+      <category term="基础算法" scheme="https://wangzun233.top/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -462,156 +608,6 @@
       <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开学第四周---周记</title>
-    <link href="https://wangzun233.top/2019/11/04/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%9B%9B%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
-    <id>https://wangzun233.top/2019/11/04/%E5%BC%80%E5%AD%A6%E7%AC%AC%E5%9B%9B%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
-    <published>2019-11-04T14:34:39.000Z</published>
-    <updated>2019-12-09T06:30:55.336Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;2019.10.28—2019.10.11.3&lt;br&gt;　　第四周比较惨先是体育课测试跑步时吧把饭卡丢了周六骑行比赛又把手机屏幕摔碎了这后半周非常的丧气心情非常低落导致我一直不想写拖到了周一晚上.很难受.&lt;br&gt;　　说说收获吧.体测跑一千米跑了4分22秒已经很不错
-        
-      
-    
-    </summary>
-    
-    
-      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
-    
-    
-      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开学第三周---周记</title>
-    <link href="https://wangzun233.top/2019/10/27/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%B8%89%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
-    <id>https://wangzun233.top/2019/10/27/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%B8%89%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
-    <published>2019-10-27T12:23:53.000Z</published>
-    <updated>2019-12-14T03:53:20.711Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;2019.10.21—2019.10.27&lt;br&gt;　　第三周给自己的天气站造了一个外壳肝了4个多小时积木拼的手疼,还做了一个手机支架花了3个多小时有了积木真是想到什么拼什么.而且都还很不错我还是蛮心灵手巧的.&lt;br&gt;　　健身方面每周休息两天周二和周三.这三周体重
-        
-      
-    
-    </summary>
-    
-    
-      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
-    
-    
-      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开学第二周---周记</title>
-    <link href="https://wangzun233.top/2019/10/20/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
-    <id>https://wangzun233.top/2019/10/20/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
-    <published>2019-10-20T12:40:31.000Z</published>
-    <updated>2019-12-16T09:53:11.804Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;2019.10.14—2019.10.20&lt;br&gt;　　第二周在在健身上面有了质的飞跃两周的坚持迎来了第一个成果有二头肌了但这一周有两天没去一天是做皮试,还有一天是满课.以后除了满课的那一天争取天天都去.&lt;br&gt;　　参加了一次社团修车培训学习如何拆车补胎再装好以后
-        
-      
-    
-    </summary>
-    
-    
-      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
-    
-    
-      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开学第一周---周记</title>
-    <link href="https://wangzun233.top/2019/10/13/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
-    <id>https://wangzun233.top/2019/10/13/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
-    <published>2019-10-13T02:02:29.000Z</published>
-    <updated>2019-12-09T06:31:39.485Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;2019.10.7—2019.10.13&lt;br&gt;　　正式开学第一周,非常非常的充实身体上:每天都会去健身房锻炼身体大约一个半小时到两个小时每次都是没课去的所以时间比较紧张,每隔一天早起跑步跑5圈一定要坚持下去.&lt;br&gt;　　美食上:去了一趟华北理工的食堂要了碗酸辣
-        
-      
-    
-    </summary>
-    
-    
-      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
-    
-    
-      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C语言scanf_s踩坑</title>
-    <link href="https://wangzun233.top/2019/10/11/C%E8%AF%AD%E8%A8%80scanf-s%E8%B8%A9%E5%9D%91/"/>
-    <id>https://wangzun233.top/2019/10/11/C%E8%AF%AD%E8%A8%80scanf-s%E8%B8%A9%E5%9D%91/</id>
-    <published>2019-10-11T13:45:26.000Z</published>
-    <updated>2019-12-22T14:09:35.884Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;2019.10.11&lt;br&gt;　　跟着书上的代码一直报错,经过百度 谷歌的查询知道&lt;code&gt;scanf&lt;/code&gt;在visual
-        
-      
-    
-    </summary>
-    
-    
-      <category term="C语言" scheme="https://wangzun233.top/categories/C%E8%AF%AD%E8%A8%80/"/>
-    
-    
-      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="C语言" scheme="https://wangzun233.top/tags/C%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
