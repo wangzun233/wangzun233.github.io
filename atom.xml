@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wangzun233.top/"/>
-  <updated>2020-04-12T14:14:50.930Z</updated>
+  <updated>2020-04-13T15:44:17.819Z</updated>
   <id>https://wangzun233.top/</id>
   
   <author>
@@ -17,11 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>算法-单调队列！</title>
+    <link href="https://wangzun233.top/2020/04/13/%E7%AE%97%E6%B3%95-%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%EF%BC%81/"/>
+    <id>https://wangzun233.top/2020/04/13/%E7%AE%97%E6%B3%95-%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%EF%BC%81/</id>
+    <published>2020-04-13T15:43:35.000Z</published>
+    <updated>2020-04-13T15:44:17.819Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;给定一个大小为n≤106n≤106的数组。&lt;/p&gt;
+&lt;p&gt;有一个大小为k的滑动窗口，它从数组的最左边移动到最右边。&lt;/p&gt;
+&lt;p&gt;您只能在窗口中看到k个数字。&lt;/p&gt;
+&lt;p&gt;每次滑动窗口向右移动一个位置。&lt;/p&gt;
+&lt;p&gt;以下是一个例子：&lt;/p&gt;
+&lt;p&gt;该数组为[1 3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://wangzun233.top/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数据结构" scheme="https://wangzun233.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>算法-单调栈！</title>
     <link href="https://wangzun233.top/2020/04/12/%E7%AE%97%E6%B3%95-%E5%8D%95%E8%B0%83%E6%A0%88%EF%BC%81/"/>
     <id>https://wangzun233.top/2020/04/12/%E7%AE%97%E6%B3%95-%E5%8D%95%E8%B0%83%E6%A0%88%EF%BC%81/</id>
     <published>2020-04-12T14:14:40.000Z</published>
-    <updated>2020-04-12T14:14:50.930Z</updated>
+    <updated>2020-04-13T15:44:11.243Z</updated>
     
     <summary type="html">
     
@@ -37,6 +71,12 @@
     </summary>
     
     
+      <category term="算法" scheme="https://wangzun233.top/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数据结构" scheme="https://wangzun233.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
@@ -566,36 +606,6 @@
         
           &lt;ul&gt;
 &lt;li&gt;2019.11.11—2019.11.17&lt;br&gt;　　这一周很忙,最忙的的两件事情还赶在了同一天.&lt;br&gt;　　周四上午心理课表演我的小组在前一天演出之前确定了演出人员和大致剧情,在表演的时候超长发挥老师的给出了9分的好成绩.&lt;br&gt;　　下午是语文朗诵这个我准备的
-        
-      
-    
-    </summary>
-    
-    
-      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
-    
-    
-      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开学第五周-周记</title>
-    <link href="https://wangzun233.top/2019/11/10/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%BA%94%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
-    <id>https://wangzun233.top/2019/11/10/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%BA%94%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
-    <published>2019-11-10T10:40:19.000Z</published>
-    <updated>2019-12-09T06:31:15.131Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;2019.11.4—2019.11.10&lt;br&gt;　　第五周成功的体验了一把将近六天没有手机的生活,感觉良好先说说缺点:找人靠随缘,接电话随缘,早晨没有闹铃起不来,收到的信息很不及时.优点睡得早,起床快闲暇时间没有手机就看书或者搞点小东西.感觉没有手机的生活很稳.
         
       
     
