@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wangzun233.top/"/>
-  <updated>2020-04-14T11:26:54.971Z</updated>
+  <updated>2020-04-15T02:58:21.085Z</updated>
   <id>https://wangzun233.top/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法-Trie树</title>
+    <link href="https://wangzun233.top/2020/04/15/%E7%AE%97%E6%B3%95-Trie%E6%A0%91/"/>
+    <id>https://wangzun233.top/2020/04/15/%E7%AE%97%E6%B3%95-Trie%E6%A0%91/</id>
+    <published>2020-04-15T02:55:07.000Z</published>
+    <updated>2020-04-15T02:58:21.085Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Trie树&quot;&gt;&lt;a href=&quot;#Trie树&quot; class=&quot;headerlink&quot; title=&quot;Trie树&quot;&gt;&lt;/a&gt;Trie树&lt;/h3&gt;&lt;p&gt;维护一个字符串集合，支持两种操作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;“I
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://wangzun233.top/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数据结构" scheme="https://wangzun233.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>算法-KMP字符串！！！！</title>
@@ -575,36 +606,6 @@
         
           &lt;ul&gt;
 &lt;li&gt;2019.11.25—2019.12.1&lt;br&gt;　　这一周在周一参加了一个”海报大赛”上台解说创意和思路,自我感觉表现良好得了一个优秀奖,虽然不是一二三但是比没有强,hhh,怎么说呢不太满意.&lt;br&gt;　　在摄影课上老师讲解了上一周大家外出摄影的优缺点和细节,很多
-        
-      
-    
-    </summary>
-    
-    
-      <category term="周记" scheme="https://wangzun233.top/categories/%E5%91%A8%E8%AE%B0/"/>
-    
-    
-      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="周记" scheme="https://wangzun233.top/tags/%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开学第七周-周记</title>
-    <link href="https://wangzun233.top/2019/11/24/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%B8%83%E5%91%A8-%E5%91%A8%E8%AE%B0/"/>
-    <id>https://wangzun233.top/2019/11/24/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%B8%83%E5%91%A8-%E5%91%A8%E8%AE%B0/</id>
-    <published>2019-11-24T14:02:46.000Z</published>
-    <updated>2019-12-09T06:29:57.234Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;2019.11.18-2019.11.24&lt;br&gt;　　这一周发现了一个好软件番茄ToDo找到可以实现我学习的数据化还顺便可以在学习的时候不玩手机,非常好用.还发现了蚂蚁森林出新树马上加入合种开始种树,种了一颗侧柏.&lt;br&gt;　　双十一买的零食也到了.天天吃好吃点的
         
       
     
