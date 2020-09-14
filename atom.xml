@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wangzun233.top/"/>
-  <updated>2020-07-01T09:41:55.868Z</updated>
+  <updated>2020-09-14T01:15:14.620Z</updated>
   <id>https://wangzun233.top/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法总结（持续更新）</title>
+    <link href="https://wangzun233.top/2020/09/14/%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
+    <id>https://wangzun233.top/2020/09/14/%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</id>
+    <published>2020-09-14T01:10:40.000Z</published>
+    <updated>2020-09-14T01:15:14.620Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在c++当中为了区别和C语言相同的标准库，c++的标准库都用c开头   C语言都用.h结尾&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;优化cin读入速度&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot;line-numbers
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://wangzun233.top/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数据结构" scheme="https://wangzun233.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>阿里云ECS训练营进阶班——Day07</title>
@@ -152,11 +187,11 @@
   </entry>
   
   <entry>
-    <title>阿阿里云ACA认证--Day02</title>
+    <title>阿里云ACA认证--Day02</title>
     <link href="https://wangzun233.top/2020/06/23/%E9%98%BF%E9%98%BF%E9%87%8C%E4%BA%91ACA%E8%AE%A4%E8%AF%81-Day02/"/>
     <id>https://wangzun233.top/2020/06/23/%E9%98%BF%E9%98%BF%E9%87%8C%E4%BA%91ACA%E8%AE%A4%E8%AF%81-Day02/</id>
     <published>2020-06-23T08:41:09.000Z</published>
-    <updated>2020-07-01T08:45:01.586Z</updated>
+    <updated>2020-08-31T00:47:18.552Z</updated>
     
     <summary type="html">
     
@@ -541,37 +576,6 @@
         
           &lt;h3 id=&quot;模拟栈&quot;&gt;&lt;a href=&quot;#模拟栈&quot; class=&quot;headerlink&quot; title=&quot;模拟栈&quot;&gt;&lt;/a&gt;模拟栈&lt;/h3&gt;&lt;p&gt;实现一个栈，栈初始为空，支持四种操作：&lt;/p&gt;
 &lt;p&gt;(1) “push x” – 向栈顶插入一个数x；&lt;/p&gt;
-&lt;p&gt;(2)
-        
-      
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="https://wangzun233.top/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="数据结构" scheme="https://wangzun233.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>算法-双链表</title>
-    <link href="https://wangzun233.top/2020/04/12/%E7%AE%97%E6%B3%95-%E5%8F%8C%E9%93%BE%E8%A1%A8/"/>
-    <id>https://wangzun233.top/2020/04/12/%E7%AE%97%E6%B3%95-%E5%8F%8C%E9%93%BE%E8%A1%A8/</id>
-    <published>2020-04-12T14:10:51.000Z</published>
-    <updated>2020-06-15T10:06:47.769Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;双链表&quot;&gt;&lt;a href=&quot;#双链表&quot; class=&quot;headerlink&quot; title=&quot;双链表&quot;&gt;&lt;/a&gt;双链表&lt;/h3&gt;&lt;p&gt;实现一个双链表，双链表初始为空，支持5种操作：&lt;/p&gt;
-&lt;p&gt;(1) 在最左侧插入一个数；&lt;/p&gt;
 &lt;p&gt;(2)
         
       
