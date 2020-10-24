@@ -1,0 +1,1642 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UC课程笔记 | WangZun233</title><meta name="description" content="UC课程笔记"><meta name="keywords" content="笔记,C语言"><meta name="author" content="wangzun233"><meta name="copyright" content="wangzun233"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/ttbb.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="UC课程笔记"><meta name="twitter:description" content="UC课程笔记"><meta name="twitter:image" content="http://img.wangzun233.top/76.jpg"><meta property="og:type" content="article"><meta property="og:title" content="UC课程笔记"><meta property="og:url" content="https://wangzun233.top/2020/10/24/UC%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"><meta property="og:site_name" content="WangZun233"><meta property="og:description" content="UC课程笔记"><meta property="og:image" content="http://img.wangzun233.top/76.jpg"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="https://wangzun233.top/2020/10/24/UC%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"><link rel="next" title="Untitled" href="https://wangzun233.top/2020/09/15/Untitled/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://wangzun233.top/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: true  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="WangZun233" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/ttbb.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">78</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">12</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">10</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="http://47.98.48.185:11336/" target="_blank" rel="noopener"><i class="fa-fw fa fa-music"></i><span> 网易云签到</span></a></li><li><a class="site-page" href="https://www.wangzun233.top/young/" target="_blank" rel="noopener"><i class="fa-fw fa fa-film"></i><span> 计时</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#内存管理"><span class="toc-number">1.</span> <span class="toc-text">内存管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#进程和程序"><span class="toc-number">1.0.1.</span> <span class="toc-text">进程和程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进程中的内存区域划分"><span class="toc-number">1.0.2.</span> <span class="toc-text">进程中的内存区域划分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">1.0.3.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#地址分类"><span class="toc-number">1.1.</span> <span class="toc-text">地址分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#•物理地址："><span class="toc-number">1.1.1.</span> <span class="toc-text">•物理地址：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#•逻辑地址："><span class="toc-number">1.1.2.</span> <span class="toc-text">•逻辑地址：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#•线性地址（虚拟地址）："><span class="toc-number">1.1.3.</span> <span class="toc-text">•线性地址（虚拟地址）：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#寄存器"><span class="toc-number">1.2.</span> <span class="toc-text">寄存器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ALU"><span class="toc-number">1.3.</span> <span class="toc-text">ALU</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三大总线"><span class="toc-number">1.4.</span> <span class="toc-text">三大总线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#•数据总线DB"><span class="toc-number">1.4.1.</span> <span class="toc-text">•数据总线DB:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#•地址总线AB："><span class="toc-number">1.4.2.</span> <span class="toc-text">•地址总线AB：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#•控制总线CB："><span class="toc-number">1.4.3.</span> <span class="toc-text">•控制总线CB：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#虚拟内存"><span class="toc-number">1.5.</span> <span class="toc-text">虚拟内存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#地址转换"><span class="toc-number">1.6.</span> <span class="toc-text">地址转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实模式（16位处理器寻址）"><span class="toc-number">1.7.</span> <span class="toc-text">实模式（16位处理器寻址）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#malloc-函数"><span class="toc-number">1.8.</span> <span class="toc-text">malloc  函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#malloc函数详解"><span class="toc-number">1.8.1.</span> <span class="toc-text">malloc函数详解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#free详解"><span class="toc-number">1.8.2.</span> <span class="toc-text">free详解</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#获取进程ID号"><span class="toc-number">2.</span> <span class="toc-text">获取进程ID号</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#size命令"><span class="toc-number">3.</span> <span class="toc-text">size命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件"><span class="toc-number">4.</span> <span class="toc-text">文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#文件的分类"><span class="toc-number">4.1.</span> <span class="toc-text">文件的分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件操作函数"><span class="toc-number">4.2.</span> <span class="toc-text">文件操作函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件描述符"><span class="toc-number">4.3.</span> <span class="toc-text">文件描述符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#open函数"><span class="toc-number">4.4.</span> <span class="toc-text">open函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#creat函数"><span class="toc-number">4.5.</span> <span class="toc-text">creat函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#close函数"><span class="toc-number">4.6.</span> <span class="toc-text">close函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#read函数"><span class="toc-number">4.7.</span> <span class="toc-text">read函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#write函数"><span class="toc-number">4.8.</span> <span class="toc-text">write函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lseek函数"><span class="toc-number">4.9.</span> <span class="toc-text">lseek函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#access函数"><span class="toc-number">4.10.</span> <span class="toc-text">access函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dup函数"><span class="toc-number">4.11.</span> <span class="toc-text">dup函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dup2函数"><span class="toc-number">4.12.</span> <span class="toc-text">dup2函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取文件元数据"><span class="toc-number">4.13.</span> <span class="toc-text">获取文件元数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命令"><span class="toc-number">4.14.</span> <span class="toc-text">命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#stat函数"><span class="toc-number">4.15.</span> <span class="toc-text">stat函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fstat函数"><span class="toc-number">4.16.</span> <span class="toc-text">fstat函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#struct-stat"><span class="toc-number">4.17.</span> <span class="toc-text">struct stat</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#st-mode"><span class="toc-number">4.17.1.</span> <span class="toc-text">st_mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#st-mode的文件类型"><span class="toc-number">4.17.2.</span> <span class="toc-text">st_mode的文件类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算文件类型"><span class="toc-number">4.17.3.</span> <span class="toc-text">计算文件类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算文件类型宏"><span class="toc-number">4.17.4.</span> <span class="toc-text">计算文件类型宏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件权限"><span class="toc-number">4.17.5.</span> <span class="toc-text">文件权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件权限位"><span class="toc-number">4.17.6.</span> <span class="toc-text">文件权限位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取文件权限"><span class="toc-number">4.17.7.</span> <span class="toc-text">获取文件权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他位"><span class="toc-number">4.17.8.</span> <span class="toc-text">其他位</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#时间函数"><span class="toc-number">5.</span> <span class="toc-text">时间函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux下用户的信息"><span class="toc-number">6.</span> <span class="toc-text">Linux下用户的信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#获取用户信息"><span class="toc-number">7.</span> <span class="toc-text">获取用户信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux下的组信息"><span class="toc-number">8.</span> <span class="toc-text">Linux下的组信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#获取组信息"><span class="toc-number">9.</span> <span class="toc-text">获取组信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chmod-fchmod"><span class="toc-number">10.</span> <span class="toc-text">chmod&#x2F;fchmod</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rename重命名"><span class="toc-number">11.</span> <span class="toc-text">rename重命名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ftruncate函数"><span class="toc-number">12.</span> <span class="toc-text">ftruncate函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件的映射"><span class="toc-number">13.</span> <span class="toc-text">文件的映射</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#mmap函数"><span class="toc-number">13.1.</span> <span class="toc-text">mmap函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mmap函数参数"><span class="toc-number">13.1.1.</span> <span class="toc-text">mmap函数参数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#munmap函数参数"><span class="toc-number">13.2.</span> <span class="toc-text">munmap函数参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mmap"><span class="toc-number">13.2.1.</span> <span class="toc-text">mmap</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#目录函数"><span class="toc-number">14.</span> <span class="toc-text">目录函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#opendir函数"><span class="toc-number">14.1.</span> <span class="toc-text">opendir函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#closedir函数"><span class="toc-number">14.2.</span> <span class="toc-text">closedir函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#readdir函数"><span class="toc-number">14.3.</span> <span class="toc-text">readdir函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他目录操作函数"><span class="toc-number">14.4.</span> <span class="toc-text">其他目录操作函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#进程管理"><span class="toc-number">15.</span> <span class="toc-text">进程管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#进程的相关概念"><span class="toc-number">15.1.</span> <span class="toc-text">进程的相关概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间片轮转算法"><span class="toc-number">15.2.</span> <span class="toc-text">时间片轮转算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进程控制块-PCB"><span class="toc-number">15.3.</span> <span class="toc-text">进程控制块-PCB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进程的控制信息"><span class="toc-number">15.4.</span> <span class="toc-text">进程的控制信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进程三种基本状态"><span class="toc-number">15.5.</span> <span class="toc-text">进程三种基本状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进程的五状态模型"><span class="toc-number">15.6.</span> <span class="toc-text">进程的五状态模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进程的相关命令"><span class="toc-number">15.7.</span> <span class="toc-text">进程的相关命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#父子进程"><span class="toc-number">15.8.</span> <span class="toc-text">父子进程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进程的ID获取"><span class="toc-number">15.9.</span> <span class="toc-text">进程的ID获取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进程的创建-frok"><span class="toc-number">15.10.</span> <span class="toc-text">进程的创建-frok</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码执行的方式"><span class="toc-number">15.10.1.</span> <span class="toc-text">代码执行的方式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#父子进程的资源"><span class="toc-number">15.11.</span> <span class="toc-text">父子进程的资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#父子进程的关系"><span class="toc-number">15.12.</span> <span class="toc-text">父子进程的关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fork函数扩张"><span class="toc-number">15.13.</span> <span class="toc-text">fork函数扩张</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进程的终止"><span class="toc-number">15.14.</span> <span class="toc-text">进程的终止</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进程终止函数"><span class="toc-number">15.15.</span> <span class="toc-text">进程终止函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是遗言函数？"><span class="toc-number">15.16.</span> <span class="toc-text">什么是遗言函数？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#atexit和on-exit"><span class="toc-number">15.16.1.</span> <span class="toc-text">atexit和on_exit</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#挂起进程"><span class="toc-number">15.17.</span> <span class="toc-text">挂起进程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进程的阻塞，挂起和睡眠"><span class="toc-number">15.18.</span> <span class="toc-text">进程的阻塞，挂起和睡眠</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wait函数"><span class="toc-number">15.19.</span> <span class="toc-text">wait函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#wait函数详解"><span class="toc-number">15.19.1.</span> <span class="toc-text">wait函数详解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#waitpid函数"><span class="toc-number">15.20.</span> <span class="toc-text">waitpid函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wait-waitpid工作方式"><span class="toc-number">15.21.</span> <span class="toc-text">wait&#x2F;waitpid工作方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vfork函数"><span class="toc-number">15.22.</span> <span class="toc-text">vfork函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fork和vfork的区别"><span class="toc-number">15.23.</span> <span class="toc-text">fork和vfork的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#exec函数族"><span class="toc-number">15.24.</span> <span class="toc-text">exec函数族</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#exec函数原型"><span class="toc-number">15.24.1.</span> <span class="toc-text">exec函数原型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#exec函数参数说明"><span class="toc-number">15.24.1.1.</span> <span class="toc-text">exec函数参数说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#exec函数族一般规律"><span class="toc-number">15.24.1.2.</span> <span class="toc-text">exec函数族一般规律</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#execl使用案列"><span class="toc-number">15.24.2.</span> <span class="toc-text">execl使用案列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#execv使用案列"><span class="toc-number">15.24.3.</span> <span class="toc-text">execv使用案列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#execlp使用案列"><span class="toc-number">15.24.4.</span> <span class="toc-text">execlp使用案列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#execvp使用案列"><span class="toc-number">15.24.5.</span> <span class="toc-text">execvp使用案列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#execle使用案列"><span class="toc-number">15.24.6.</span> <span class="toc-text">execle使用案列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#execve使用案列"><span class="toc-number">15.24.7.</span> <span class="toc-text">execve使用案列</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#system-函数"><span class="toc-number">15.25.</span> <span class="toc-text">system()函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#信号"><span class="toc-number">16.</span> <span class="toc-text">信号</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#中断"><span class="toc-number">16.1.</span> <span class="toc-text">中断</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信号-1"><span class="toc-number">16.2.</span> <span class="toc-text">信号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信号本质"><span class="toc-number">16.3.</span> <span class="toc-text">信号本质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信号的处理过程"><span class="toc-number">16.4.</span> <span class="toc-text">信号的处理过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信号的处理方式"><span class="toc-number">16.5.</span> <span class="toc-text">信号的处理方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信号的诞生"><span class="toc-number">16.6.</span> <span class="toc-text">信号的诞生</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#发出信号的原因简单分类"><span class="toc-number">16.7.</span> <span class="toc-text">发出信号的原因简单分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信号在进程中注册"><span class="toc-number">16.8.</span> <span class="toc-text">信号在进程中注册</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可靠信号和不可靠信号"><span class="toc-number">16.9.</span> <span class="toc-text">可靠信号和不可靠信号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可靠信号-不可靠信号"><span class="toc-number">16.10.</span> <span class="toc-text">可靠信号&#x2F;不可靠信号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信号的注册"><span class="toc-number">16.11.</span> <span class="toc-text">信号的注册</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Signal函数"><span class="toc-number">16.12.</span> <span class="toc-text">Signal函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Signal详解"><span class="toc-number">16.12.1.</span> <span class="toc-text">Signal详解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#父子进程处理信号"><span class="toc-number">16.13.</span> <span class="toc-text">父子进程处理信号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信号的发送方式"><span class="toc-number">16.14.</span> <span class="toc-text">信号的发送方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#raise函数"><span class="toc-number">16.15.</span> <span class="toc-text">raise函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#kill函数函数"><span class="toc-number">16.16.</span> <span class="toc-text">kill函数函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#alarm函数"><span class="toc-number">16.17.</span> <span class="toc-text">alarm函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pause函数"><span class="toc-number">16.18.</span> <span class="toc-text">pause函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信号函数总结"><span class="toc-number">16.19.</span> <span class="toc-text">信号函数总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信号集"><span class="toc-number">16.20.</span> <span class="toc-text">信号集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#信号集基本操作"><span class="toc-number">16.20.1.</span> <span class="toc-text">信号集基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sigfillset"><span class="toc-number">16.20.1.1.</span> <span class="toc-text">sigfillset</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sigemptyset"><span class="toc-number">16.20.1.2.</span> <span class="toc-text">sigemptyset</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sigaddset"><span class="toc-number">16.20.1.3.</span> <span class="toc-text">sigaddset</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sigdelset"><span class="toc-number">16.20.1.4.</span> <span class="toc-text">sigdelset</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sigismember"><span class="toc-number">16.20.1.5.</span> <span class="toc-text">sigismember</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#递送、未决与掩码"><span class="toc-number">16.21.</span> <span class="toc-text">递送、未决与掩码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#屏蔽信号"><span class="toc-number">16.22.</span> <span class="toc-text">屏蔽信号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sigprocmask函数"><span class="toc-number">16.22.1.</span> <span class="toc-text">sigprocmask函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sigpending函数"><span class="toc-number">16.22.2.</span> <span class="toc-text">sigpending函数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#定时器"><span class="toc-number">17.</span> <span class="toc-text">定时器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#为进程设定计时器"><span class="toc-number">17.1.</span> <span class="toc-text">为进程设定计时器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置计时器"><span class="toc-number">17.2.</span> <span class="toc-text">设置计时器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设定计时器"><span class="toc-number">17.3.</span> <span class="toc-text">设定计时器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#进程间通信"><span class="toc-number">18.</span> <span class="toc-text">进程间通信</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念"><span class="toc-number">18.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进程间的通信方式"><span class="toc-number">18.2.</span> <span class="toc-text">进程间的通信方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#管道"><span class="toc-number">18.3.</span> <span class="toc-text">管道</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#管道的分类"><span class="toc-number">18.3.1.</span> <span class="toc-text">管道的分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有名管道"><span class="toc-number">18.3.2.</span> <span class="toc-text">有名管道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编程模型"><span class="toc-number">18.3.3.</span> <span class="toc-text">编程模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建有名管道文件"><span class="toc-number">18.3.4.</span> <span class="toc-text">创建有名管道文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无名管道"><span class="toc-number">18.3.5.</span> <span class="toc-text">无名管道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无名管道的使用"><span class="toc-number">18.3.6.</span> <span class="toc-text">无名管道的使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XSI进程间通信"><span class="toc-number">18.4.</span> <span class="toc-text">XSI进程间通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IPC对象的标识符和键"><span class="toc-number">18.5.</span> <span class="toc-text">IPC对象的标识符和键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IPC对象的标识符和键-1"><span class="toc-number">18.6.</span> <span class="toc-text">IPC对象的标识符和键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IPC对象的会-汇-合"><span class="toc-number">18.7.</span> <span class="toc-text">IPC对象的会(汇)合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IPC对象的会合方式"><span class="toc-number">18.8.</span> <span class="toc-text">IPC对象的会合方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ftok函数详解"><span class="toc-number">18.9.</span> <span class="toc-text">ftok函数详解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XSI-ipc的实现步骤"><span class="toc-number">18.10.</span> <span class="toc-text">XSI ipc的实现步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关命令"><span class="toc-number">18.11.</span> <span class="toc-text">相关命令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#共享内存"><span class="toc-number">19.</span> <span class="toc-text">共享内存</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#编程模型-1"><span class="toc-number">19.1.</span> <span class="toc-text">编程模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shmget"><span class="toc-number">19.2.</span> <span class="toc-text">shmget</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shmget参数详解"><span class="toc-number">19.3.</span> <span class="toc-text">shmget参数详解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shmat"><span class="toc-number">19.4.</span> <span class="toc-text">shmat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shmdt"><span class="toc-number">19.5.</span> <span class="toc-text">shmdt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shmctl"><span class="toc-number">19.6.</span> <span class="toc-text">shmctl</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shmctl参数"><span class="toc-number">19.7.</span> <span class="toc-text">Shmctl参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shmid-ds结构"><span class="toc-number">19.8.</span> <span class="toc-text">shmid_ds结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ipc-perm结构"><span class="toc-number">19.9.</span> <span class="toc-text">ipc_perm结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#消息队列"><span class="toc-number">20.</span> <span class="toc-text">消息队列</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#•流量控制"><span class="toc-number">20.1.</span> <span class="toc-text">•流量控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#•面向记录"><span class="toc-number">20.1.1.</span> <span class="toc-text">•面向记录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#消息队列特点"><span class="toc-number">20.2.</span> <span class="toc-text">消息队列特点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#•类型过滤"><span class="toc-number">20.2.1.</span> <span class="toc-text">•类型过滤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#•天然同步"><span class="toc-number">20.2.2.</span> <span class="toc-text">•天然同步</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编程模型-2"><span class="toc-number">20.3.</span> <span class="toc-text">编程模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建-获取消息队列-msgget"><span class="toc-number">20.4.</span> <span class="toc-text">创建&#x2F;获取消息队列 msgget</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#向消息队列发送消息msgsnd"><span class="toc-number">20.5.</span> <span class="toc-text">向消息队列发送消息msgsnd</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#向消息队列发送消息1"><span class="toc-number">20.6.</span> <span class="toc-text">向消息队列发送消息1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从消息队列接受消息"><span class="toc-number">20.7.</span> <span class="toc-text">从消息队列接受消息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从消息队列接受消息1"><span class="toc-number">20.8.</span> <span class="toc-text">从消息队列接受消息1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从消息队列接受消息2"><span class="toc-number">20.9.</span> <span class="toc-text">从消息队列接受消息2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#销毁-控制消息队列msgctl"><span class="toc-number">20.10.</span> <span class="toc-text">销毁&#x2F;控制消息队列msgctl</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#销毁-控制消息队列msqid-ds"><span class="toc-number">20.11.</span> <span class="toc-text">销毁&#x2F;控制消息队列msqid_ds</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#销毁-控制消息队列"><span class="toc-number">20.12.</span> <span class="toc-text">销毁&#x2F;控制消息队列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2020-10-24"><span class="toc-number">20.13.</span> <span class="toc-text">2020.10.24</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(http://img.wangzun233.top/76.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">WangZun233</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="http://47.98.48.185:11336/" target="_blank" rel="noopener"><i class="fa-fw fa fa-music"></i><span> 网易云签到</span></a></li><li><a class="site-page" href="https://www.wangzun233.top/young/" target="_blank" rel="noopener"><i class="fa-fw fa fa-film"></i><span> 计时</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">UC课程笔记</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-10-24 10:04:42"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-10-24</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-10-24 10:08:09"><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-10-24</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><h1 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h1><ul>
+<li>整数页为4096 = 4K</li>
+</ul>
+<ol>
+<li><h3 id="进程和程序"><a href="#进程和程序" class="headerlink" title="进程和程序"></a>进程和程序</h3><ol>
+<li>程序 - 硬盘上的可执行文件  </li>
+<li>进程 - 在内存中运行的程序</li>
+</ol>
+</li>
+<li><h3 id="进程中的内存区域划分"><a href="#进程中的内存区域划分" class="headerlink" title="进程中的内存区域划分"></a>进程中的内存区域划分</h3><ol>
+<li>–代码区-来存放可执行文件的操作指令-不可写的</li>
+<li>–只读常量区- 存放字符串常量,以及const修饰的全局变量</li>
+<li>–全局区/数据区 - 存放已经初始化的全局变量和static修饰的局部变量</li>
+<li>–BSS段- 存放没有初始化的全局变量和静态局部变量，该区域会在main函数执行之前进行自动清零</li>
+<li>–堆区 - 使用malloc/calloc/realloc/free函数处理的内存,该区域的内存需要程序员手动申请和手动释放</li>
+<li>–栈区 - 存放局部变量、形参、const修饰的局部变量，以及块变量，该区域的内存由操作系统负责分配和回收，程序员尽管放心使用即可</li>
+</ol>
+</li>
+<li><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol>
+<li><p>–按照地址从小到大进行排列,进程中的内存区域依次为：代码区、只读常量区、全局区/数据区、BSS段、 堆区、栈区 </p>
+</li>
+<li><p>–其中代码区和只读常量区一般统称为代码区；其中全局区/数据区和BSS段一般统称为全局区/数据区  </p>
+</li>
+<li><p>–栈区和堆区之间并没有严格的分割线，可以进行微调，并且堆区的分配一般按照地址从小到大进行，而栈区的分配一般按照地址从大到小进行分配</p>
+<p><img src="/img/loading.gif" class="lazyload" data-src="E:%5C%E7%AC%94%E8%AE%B02%5C2020%E5%A4%A7%E4%BA%8CUC%E7%AC%94%E8%AE%B0%5C%E5%9B%BE%E7%89%871.png"  alt=""></p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="地址分类"><a href="#地址分类" class="headerlink" title="地址分类"></a>地址分类</h2><h3 id="•物理地址："><a href="#•物理地址：" class="headerlink" title="•物理地址："></a>•物理地址：</h3><p>也就是内存单元的实际地址，用于芯片级内存单元寻址。 物理地址也由32位无符号整数表示。</p>
+<h3 id="•逻辑地址："><a href="#•逻辑地址：" class="headerlink" title="•逻辑地址："></a>•逻辑地址：</h3><p>程序代码经过编译后出现在 汇编程序中地址。每个逻辑地址都由一个段和偏移量组成。</p>
+<h3 id="•线性地址（虚拟地址）："><a href="#•线性地址（虚拟地址）：" class="headerlink" title="•线性地址（虚拟地址）："></a>•线性地址（虚拟地址）：</h3><p>在32位CPU架构下，可以表示4G的地址空间，用16进制表示就是0x00000000—0Xffff ffff </p>
+<h2 id="寄存器"><a href="#寄存器" class="headerlink" title="寄存器"></a>寄存器</h2><p>•16位处理器：即80386之前的系列，一般以8086为代表，8086 CPU 中寄存器总共为 14 个，且均为 16 位 。</p>
+<p>•32位处理器：以80386为代表,除了段寄存器位数仍为16位之外,其他的寄  存器都为32位,同时新增FS,GS两个段寄存器，即： </p>
+<p>–4个数据寄存器(EAX、EBX、ECX和EDX) </p>
+<p>–2个变址和指针寄存器(ESI和EDI) </p>
+<p>–2个指针寄存器(ESP和EBP) </p>
+<p>–6个段寄存器(ES、CS、SS、DS、FS和GS)</p>
+<p>–1个指令指针寄存器(EIP) </p>
+<p>–1个标志寄存器(EFlags)</p>
+<h2 id="ALU"><a href="#ALU" class="headerlink" title="ALU"></a>ALU</h2><p>•算术逻辑单元 (Arithmetic Logic Unit, ALU)是中央处理器(CPU)的执行单元，是所有中央处理器的核心组成部分,基本操作包括加、减、乘、除四则运算，与、或、非、异或等逻辑操作，以及移位、比较和传送等操作.我们通常说的一个CPU是16位或者是32位，指的是ALU 的宽度，即字长，它是CPU在同一时间内能处理的二进制的位数。字长反映了CPU的计算精度。</p>
+<h2 id="三大总线"><a href="#三大总线" class="headerlink" title="三大总线"></a>三大总线</h2><h3 id="•数据总线DB"><a href="#•数据总线DB" class="headerlink" title="•数据总线DB:"></a>•数据总线DB:</h3><p>用于传送数据信息。数据总线是双向三态形式的总线，即他既可以把CPU的数据传送到存储器或I／O接口等其它部件，也可以将其它部件的数据传送到CPU。</p>
+<h3 id="•地址总线AB："><a href="#•地址总线AB：" class="headerlink" title="•地址总线AB："></a>•地址总线AB：</h3><p>是专门用来传送地址的，由于地址只能从CPU传向外部存储器或I／O端口，所以地址总线总是单向三态的，这与数据总线不同。地址总线的位数决定了CPU可直接寻址的内存空间大小。一般来说，若地址总线为n位，则可寻址空间为2^n字节。 </p>
+<h3 id="•控制总线CB："><a href="#•控制总线CB：" class="headerlink" title="•控制总线CB："></a>•控制总线CB：</h3><p>用来传送控制信号和时序信号。控制信号中，有的是微处理器送往存储器和I／O接口电路的，也有是其它部件反馈给CPU的，因此，控制总线的传送方向由具体控制信号而定，一般是双向的，控制总线的位数要根据系统的实际控制需要而定。</p>
+<h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h2><p>•<strong>每个进程的用户空间都是完全独立</strong>、互不相干的。不信的话，你可以把上面的程序同时运行10次（当然为了同时运行，让它们在返回前一同睡眠100秒吧），你会看到10个进程占用的线性地址一模一样。</p>
+<p>•本质上说，<strong>虚拟内存地址剥夺了应用程序自由访问物理内存地址的权利</strong>。进程对物理内存的访问，必须经过操作系统的审查。只要操作系统把两个进程的进程空间对应到不同的内存区域，就让两个进程空间成为“老死不相往来”的两个小王国。两个进程就不可能相互篡改对方的数据，进程出错的可能性就大为减少。</p>
+<p>•另一方面，<strong>有了虚拟内存地址，内存共享也变得简单。操作系统可以把同一物理内存区域对应到多个进程空间。共享库也是类似</strong>。对于任何一个共享库，计算机只需要往物理内存中加载一次，就可以通过操纵对应关系，来让多个进程共同使用</p>
+<h2 id="地址转换"><a href="#地址转换" class="headerlink" title="地址转换"></a>地址转换</h2><p>•<strong>逻辑地址经段机制转化成线性地址；线性地址又经过页机制转化为物理地址。</strong></p>
+<p>•在 8086 的实模式下， 通过(段基址：段偏移量)计算出内存单元的物理地址，在IA32的保护模式下，这个逻辑地址不是被直接送到内存总线而是被送到<strong>内存管理单元(MMU)</strong>。MMU由一 个或一组芯片组成， 其功能是把逻辑地址<strong>映射</strong>为物理地址，即进行地址转换，如图所示。</p>
+<p><img src="/img/loading.gif" class="lazyload" data-src="E:%5C2020%E5%A4%A7%E4%BA%8C%5C%E5%9B%BE%E7%89%871.png"  alt=""></p>
+<h2 id="实模式（16位处理器寻址）"><a href="#实模式（16位处理器寻址）" class="headerlink" title="实模式（16位处理器寻址）"></a>实模式（16位处理器寻址）</h2><p>•早期8088CPU时期.当时由于CPU的性能有限,一共只有20位地址线(地址空间只有1MB),但是一个尴尬的问题出现了,ALU的宽度只有16位,也就是说ALU不能计算20位的地址。为了解决这个问题，分段机制被引入.为了构成20位的主存地址,8088处理器设置了4个段寄存器以及8个通用寄存器,每个寄存器都是16位的,同时访问内存的指令中的地址也是16位的,当某个指令想要访问某个内存地址时,它通常需要用(段基址：段偏移量)这种格式来表示。这样就形成一个20位的实际地址，也就实现了从16位内存地址到20位实际地址的转换，或者叫“映射”。</p>
+<h2 id="malloc-函数"><a href="#malloc-函数" class="headerlink" title="malloc  函数"></a>malloc  函数</h2><p><code>char*a=NULL;</code></p>
+<p><code>a=(char*)malloc(100*sizeof(char));</code></p>
+<p><code>free(a);</code></p>
+<h3 id="malloc函数详解"><a href="#malloc函数详解" class="headerlink" title="malloc函数详解"></a>malloc函数详解</h3><p>•使用malloc函数申请内存时，除了申请所需要的内存大小之外，<strong>可能还会申请额外的12个字节</strong>,用于存储一些管理内存的相关信息，比如内存的大小等等。使用malloc申请的内存,一定要<strong>注意不要对所申请的内存空间进行越界访问，避免造成数据结构的破坏。</strong></p>
+<p>•一般来说，使用malloc<strong>申请比较小的动态内存</strong>时，<strong>操作系统会一次性分配33个内存页的大小，最终的目的就是为了提高效率而已。</strong></p>
+<p>•<strong>可以使用命令<code>cat /proc/&lt;pid&gt;/maps</code>查看某个进程占用的内存区域</strong>。 (pid是进程号,proc下的各个进程目录占磁盘大小都是0，因为其数据都存在于内存，该文件只是一个映射，并且maps文件中的内存地址为已经映射了物理内存的虚拟内存地址)</p>
+<p>•每行数据格式如下：</p>
+<p>•<strong>（内存区域）开始－结束 访问权限 偏移 主设备号：次设备号 i节点 文件。</strong></p>
+<p>注意，你一定会发现进程空间只包含三个内存区域，似乎没有上面所提到的堆、bss等，其实并非如此，程序内存段和进程地址空间中的内存区域是种模糊对应，也就是说，堆、bss、数据段（初始化过的）都在进程空间中由数据段内存区域表示</p>
+<h3 id="free详解"><a href="#free详解" class="headerlink" title="free详解"></a>free详解</h3><p>•使用free函数释放动态内存  一般来说,使用malloc申请比较大的的内存时，系统会分配34个内存页，当所申请的内存超过34个内存页时，系统会再次分配33个内存页(也就是按照33个内存页为基本单位分配)  而对于使用free释放内存时，则释放多少就减少多少,当使用free释放完毕所有内存时，系统可能会保留33个内存页以备再次申请使用，以此提高效率。</p>
+<h1 id="获取进程ID号"><a href="#获取进程ID号" class="headerlink" title="获取进程ID号"></a>获取进程ID号</h1><ol>
+<li>•./可运行文件 <code>&amp;</code></li>
+<li><code>Ps –aux</code></li>
+<li>在程序中加入<code>#include &lt;unistd.h&gt;  getpid()</code></li>
+</ol>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h></span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    pid_t pid <span class="token operator">=</span> <span class="token function">getpid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//获取当前程序的进程号</span>
+    pid_t ppid <span class="token operator">=</span> <span class="token function">getppid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//获取当前进程的父进程</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"当前进程ID%d,父进程ID%d\n"</span><span class="token punctuation">,</span>pid<span class="token punctuation">,</span>ppid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//ps -ef</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="size命令"><a href="#size命令" class="headerlink" title="size命令"></a>size命令</h1><p>•使用命令size查看程序的内存分配情况：</p>
+<p>• <code>size a.out</code></p>
+<p>•<code>text(代码区) data(数据区) bss(BSS段) dec(十进制的总和) hex(十六进制的总和) filename(文件名)</code></p>
+<h1 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h1><p>•<strong>在Unix/linux系统中，几乎所有的一切都可以看作文件</strong>,因此，对于文件的操作适用于各种输入输出设备等等，当然目录也可以看作文件。一切皆文件。</p>
+<p>•开发者仅需要使用一套 API 和开发工具即可调取 Linux 系统中绝大部分的资源•在Unix/linux系统中，几乎所有的一切都可以看作文件,因此，对于文件的操作适用于各种输入输出设备等等，当然目录也可以看作文件。一切皆文件。</p>
+<p>•开发者仅需要使用一套 API 和开发工具即可调取 Linux 系统中绝大部分的资源</p>
+<h2 id="文件的分类"><a href="#文件的分类" class="headerlink" title="文件的分类"></a>文件的分类</h2><ul>
+<li><p>普通文件:Linux中最多的一种文件类型, 包括纯文本文件、二进制文件(binary)；数据格式的文件(data);各种压缩文件.第一个属性为 [-]</p>
+</li>
+<li><p>目录文件就是目录， 能用 # cd 命令进入的。第一个属性为 [d]，例如 [drwxrwxrwx]</p>
+</li>
+<li><p>块设备文件 ： 就是存储数据以供系统存取的接口设备，简单而言就是硬盘。例如一号硬盘的代码是 /dev/hda1等文件。第一个属性为 [b]</p>
+</li>
+<li><p>字符设备文件：即串行端口的接口设备，例如键盘、鼠标等等。第一个属性为 [c]</p>
+</li>
+<li><p>套接字文件这类文件通常用在网络数据连接。可以启动一个程序来监听客户端的要求，客户端就可以通过套接字来进行数据通信。第一个属性为 [s]，最常在 /var/run目录中看到这种文件类型</p>
+</li>
+<li><p>管道文件FIFO也是一种特殊的文件类型，它主要的目的是，解决多个程序同时存取一个文件所造成的错误。FIFO是first-in-first-out(先进先出)的缩写。第一个属性为 [p]</p>
+</li>
+<li><p>链接文件类似Windows下面的快捷方式。第一个属性为 [l]，例如 [lrwxrwxrwx]</p>
+</li>
+</ul>
+<h2 id="文件操作函数"><a href="#文件操作函数" class="headerlink" title="文件操作函数"></a>文件操作函数</h2><p><code>fopen()/fclose()/fread()/fwrite()/fseek()</code></p>
+<h2 id="文件描述符"><a href="#文件描述符" class="headerlink" title="文件描述符"></a>文件描述符</h2><p>–文件描述符是内核为了高效管理已被打开的文件所创建的索引，用于指向被打开的文件，所有执行I/O操作的系统调用都通过文件描述符；文件描述符是一个简单的非负整数，用以表明每个被进程打开的文件</p>
+<ul>
+<li><p>内核缺省为每个进程打开三个文件描述符：</p>
+</li>
+<li><p><strong>stdin，标准输入，默认设备是键盘，文件编号为0</strong></p>
+</li>
+<li><p><strong>stdout，标准输出，默认设备是显示器，文件编号为1，也可以重定向到文件</strong></p>
+</li>
+<li><p><strong>stderr，标准错误，默认设备是显示器，文件编号为2，也可以重定向到文件</strong></p>
+</li>
+<li><p>ll /proc/11990/fd – 查看所有文件打开的文件描述符</p>
+</li>
+</ul>
+<h2 id="open函数"><a href="#open函数" class="headerlink" title="open函数"></a>open函数</h2><p>–<code>#include &lt;sys/types.h&gt;</code></p>
+<p>–<code>#include &lt;sys/stat.h&gt;</code></p>
+<p>–<code>#include &lt;fcntl.h&gt;</code></p>
+<p>–<code>int open(const char *pathname, int flags);</code></p>
+<p>–<code>int open(const char *pathname, int flags, mode_t mode);</code></p>
+<p>–<code>int creat(const char *pathname, mode_t mode);</code></p>
+<ul>
+<li><p>函数功能：主要用于打开/创建 一个 文件/设备</p>
+</li>
+<li><p>返回值：成功返回新的文件描述符，失败返回-1  描述符就是一个小的非负整数，用于表示当前文件</p>
+</li>
+</ul>
+<ol>
+<li>第一个参数：字符串形式的文件路径和文件名</li>
+<li>第二个参数：操作标志  必须包含以下访问模式中的一种：<ol>
+<li>O_RDONLY - 只读 </li>
+<li>O_WRONLY - 只写    </li>
+<li>O_RDWR - 可读可写  </li>
+<li>O_APPEND - 追加，写入到文件的尾部 </li>
+<li>O_CREAT - 文件不存在则创建，存在则打开 O_EXCL - 与O_CREAT搭配使用，存在则open失败 O_TRUNC - 文件存在且允许写,则清空文件</li>
+</ol>
+</li>
+<li>第三个参数：操作模式，权限  当创建新文件时，需要指定的文件权限,  如：   0644</li>
+</ol>
+<h2 id="creat函数"><a href="#creat函数" class="headerlink" title="creat函数"></a>creat函数</h2><p>–<code>#include &lt;sys/types.h&gt;</code></p>
+<p>–<code>#include &lt;sys/stat.h&gt;</code></p>
+<p>–<code>#include &lt;fcntl.h&gt;</code></p>
+<p>–<code>int creat(const char *pathname, mode_t mode);</code></p>
+<ul>
+<li>函数功能：用于创建文件，存在则更新，不存在则创建</li>
+</ul>
+<ol>
+<li>参数：第一个参数路径</li>
+<li>第二个参数权限：成功返回文件描述符，失败返回-1。</li>
+</ol>
+<ul>
+<li>creat函数是通过调用open实现的</li>
+</ul>
+<h2 id="close函数"><a href="#close函数" class="headerlink" title="close函数"></a>close函数</h2><p>–<code>#include &lt;unistd.h&gt;</code></p>
+<p>–<code>int close(int fd);</code></p>
+<ul>
+<li>函数功能：主要用于关闭参数fd指定的文件描述符，也就是让描述符fd不再关联任何一个文件，以便于下次使用 </li>
+</ul>
+<h2 id="read函数"><a href="#read函数" class="headerlink" title="read函数"></a>read函数</h2><p>–<code>#include &lt;unistd.h&gt;</code></p>
+<p>–<code>ssize_t read(int fd, void *buf, size_t count);</code></p>
+<ol>
+<li>第一个参数：文件描述符(从哪里读)</li>
+<li>第二个参数：缓冲区的首地址(存到哪里去)</li>
+<li>第三个参数：读取的数据大小</li>
+<li>返回值：成功返回读取到的字节数,返回0表示读到文件尾失败返回-1</li>
+<li>函数功能：表示从指定的文件中读取指定大小的数据</li>
+</ol>
+<h2 id="write函数"><a href="#write函数" class="headerlink" title="write函数"></a>write函数</h2><p>–<code>#include &lt;unistd.h&gt;</code></p>
+<p>– <code>ssize_t write(int fd,const void *buf,size_t count);</code></p>
+<ol>
+<li>第一个参数：文件描述符(写入到哪里去)</li>
+<li>第二个参数：缓冲区的首地址(数据从哪里来)</li>
+<li>第三个参数：写入的数据大小</li>
+</ol>
+<ul>
+<li><p>返回值：成功返回写入的数据大小，0表示没有写入,    失败返回-1</p>
+</li>
+<li><p>函数功能：表示将指定的数据写入到指定的文件中</p>
+</li>
+<li><p>注意：read和write函数一般默认以二进制形式进行读写操作</p>
+</li>
+</ul>
+<h2 id="lseek函数"><a href="#lseek函数" class="headerlink" title="lseek函数"></a>lseek函数</h2><p>–<code>#include &lt;sys/types.h&gt;  #include &lt;unistd.h&gt;</code></p>
+<p>–<code>off_t lseek(int fd,off_t offset,int whence);</code></p>
+<ol>
+<li>第一个参数：文件描述符(表示在哪个文件中操作)</li>
+<li>第二个参数：偏移量(正数表示向后，负数向前)</li>
+<li>第三个参数：起始位置(从什么地方开始偏移)  SEEK_SET - 文件开头位置  SEEK_CUR - 文件当前位置  SEEK_END - 文件结尾位置</li>
+</ol>
+<ul>
+<li><p>返回值：成功返回距离文件开头位置的偏移量，    失败返回-1</p>
+</li>
+<li><p>函数功能：主要用于调整文件的读写位置</p>
+</li>
+</ul>
+<h2 id="access函数"><a href="#access函数" class="headerlink" title="access函数"></a>access函数</h2><p>•<code>#include &lt;unistd.h&gt;</code></p>
+<p>•<code>int access (  const char* pathname, // 文件路径  int     mode   // 访问模式 );</code></p>
+<ul>
+<li><p>函数功能:按实际用户ID和实际组ID(而非有效用户ID和有效组ID)，进行访问模式测试。</p>
+<p>参数：</p>
+<ol>
+<li>路径</li>
+<li>mode取R_OK/W_OK/X_OK的位或，  测试调用进程对该文件，  是否可读/可写/可执行，  或者取F_OK，测试该文件是否存在。</li>
+</ol>
+</li>
+<li><p>返回值:成功返回0，失败返回-1。</p>
+</li>
+</ul>
+<h2 id="dup函数"><a href="#dup函数" class="headerlink" title="dup函数"></a>dup函数</h2><p>–<code>#include &lt;unistd.h&gt;</code></p>
+<p>–<code>int dup(int oldfd);</code></p>
+<ul>
+<li><p>功能:复制一个文件描述符</p>
+</li>
+<li><p>参数:oldfd:源描述符</p>
+</li>
+<li><p>返回值: 错误返回-1，errno被设置为相应的错误码成功返回新的文件描述符</p>
+</li>
+</ul>
+<h2 id="dup2函数"><a href="#dup2函数" class="headerlink" title="dup2函数"></a>dup2函数</h2><p>–<code>int dup2(int oldfd, int newfd);</code></p>
+<ul>
+<li>功能:复制一个文件描述符</li>
+</ul>
+<ol>
+<li>参数:oldfd:指定源描述符</li>
+<li>newfd:指定新的描述符 如果这个描述符原来是打开的,使用之前先关闭.</li>
+</ol>
+<ul>
+<li>返回值: 错误返回-1errno被设置为相应的错误码成功返回新的文件描述符</li>
+</ul>
+<h2 id="获取文件元数据"><a href="#获取文件元数据" class="headerlink" title="获取文件元数据"></a>获取文件元数据</h2><ul>
+<li><p>文件有两部分构成  文件的内容  文件的属性</p>
+</li>
+<li><p>文件的元数据就是文件的属性</p>
+</li>
+<li><p>每个文件都有一个对应的i节点，这个I节点里面保存了文件的元数据和所在的硬盘位置。中文译名为”索引节点”。</p>
+</li>
+<li><p>系统打开文件这个过程分成三步：首先，系统找到这个文件名对应的inode号码；其次，通过inode号码，获取inode信息；最后，根据inode信息，找到文件数据所在的block。</p>
+</li>
+</ul>
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><p>–<code>ls –i</code>查看I节点</p>
+<p>–<code>inode编号</code> 文件的类型 文件的权限 硬链接数 属主 属组 大小  最后修改时间</p>
+<p><code>stat 文件名</code> 查看文件的元数据 </p>
+<h2 id="stat函数"><a href="#stat函数" class="headerlink" title="stat函数"></a>stat函数</h2><p>–<code>#include &lt;sys/types.h&gt;</code></p>
+<p>–<code>#include &lt;sys/stat.h&gt;</code></p>
+<p>–<code>#include &lt;unistd.h&gt;</code></p>
+<p>–<code>int stat(const char *pathname, struct stat *buf);</code>功能:获取文件的身份信息</p>
+<ul>
+<li><p>参数:<code>pathname:</code>指定了文件的名字</p>
+</li>
+<li><p><code>buf:</code>将文件的身份信息存储到buf指定的空间里</p>
+</li>
+<li><p>返回值:成功  0错误  -1 errno被设置为相应错误码</p>
+</li>
+</ul>
+<h2 id="fstat函数"><a href="#fstat函数" class="headerlink" title="fstat函数"></a>fstat函数</h2><p>–<code>#include &lt;sys/types.h&gt;</code></p>
+<p>–<code>#include &lt;sys/stat.h&gt;</code></p>
+<p>–<code>#include &lt;unistd.h&gt;</code></p>
+<p>–<code>int fstat (int fd, struct stat* buf);</code></p>
+<ul>
+<li><p>功能:获取文件的身份信息</p>
+</li>
+<li><p>参数:fd:文件描述符</p>
+</li>
+<li><p>buf:将文件的身份信息存储到buf指定的空间里</p>
+</li>
+<li><p>返回值:成功  0错误  -1 errno被设置为相应错误码</p>
+</li>
+</ul>
+<h2 id="struct-stat"><a href="#struct-stat" class="headerlink" title="struct stat"></a>struct stat</h2><p><img src="/img/loading.gif" class="lazyload" data-src="E:%5C2020%E5%A4%A7%E4%BA%8C%5C%E5%9B%BE%E7%89%872.png"  alt="图片2"></p>
+<h3 id="st-mode"><a href="#st-mode" class="headerlink" title="st_mode"></a>st_mode</h3><p>•<code>t_mod</code>e成员，该成员描述了文件的类型和权限两个属性。</p>
+<p>•<code>15-12</code> 位保存文件类型</p>
+<p>•<code>11-9</code>位保存执行文件时设置的信息</p>
+<p>•<code>8-0</code> 位保存文件访问权限</p>
+<p><img src="/img/loading.gif" class="lazyload" data-src="E:%5C2020%E5%A4%A7%E4%BA%8C%5C%E5%9B%BE%E7%89%873.jpg"  alt=""></p>
+<h3 id="st-mode的文件类型"><a href="#st-mode的文件类型" class="headerlink" title="st_mode的文件类型"></a>st_mode的文件类型</h3><ul>
+<li><p>S_IFMT   0170000    文件类型的位遮罩  </p>
+</li>
+<li><p>S_IFSOCK 0140000     套接字文件  </p>
+</li>
+<li><p>S_IFLNK  0120000     链接文件 </p>
+</li>
+<li><p>S_IFREG  0100000    一般文件  </p>
+</li>
+<li><p>S_IFBLK   0060000     块设备文件  </p>
+</li>
+<li><p>S_IFDIR   0040000     目录  </p>
+</li>
+<li><p>S_IFCHR  0020000    字符设备文件  </p>
+</li>
+<li><p>S_IFIFO   0010000     管道文件</p>
+</li>
+</ul>
+<h3 id="计算文件类型"><a href="#计算文件类型" class="headerlink" title="计算文件类型"></a>计算文件类型</h3><p><code>S_IFMT</code>是一个掩码，它的值是0170000（注意这里用的是八进制）， 可以用来过滤出前四位表示的文件类型。<br> 通过掩码<code>S_IFMT</code>把其他无关的部分置0，再与表示目录的数值比较，从而判断这是否是一个目录</p>
+<h3 id="计算文件类型宏"><a href="#计算文件类型宏" class="headerlink" title="计算文件类型宏"></a>计算文件类型宏</h3><p>•为了简便操作，&lt;sys/stat.h&gt;中提供了宏来代替上述代码</p>
+<ul>
+<li>S_ISDIR() - 是否目录</li>
+<li>S_ISREG() - 是否普通文件 </li>
+<li>S_ISLNK() - 是否软链接</li>
+<li>S_ISBLK() - 是否块设备</li>
+<li>S_ISCHR() - 是否字符设备</li>
+<li>S_ISSOCK() - 是否Unix域套接字</li>
+<li>S_ISFIFO() - 是否有名管道</li>
+</ul>
+<h3 id="文件权限"><a href="#文件权限" class="headerlink" title="文件权限"></a>文件权限</h3><ul>
+<li><p>st_mode字段的最低9位，代表文件的许可权限，它标识了文件所有者、组用户、其他用户的读（r）、写（w）、执行（x）权限。</p>
+</li>
+<li><p>目录的权限与普通文件的权限是不同的。</p>
+</li>
+<li><p>目录读权限。读权限允许我们通过opendir()函数读取目录，进而可以通过readdir()函数获得目录内容，即目录下的文件列表</p>
+</li>
+<li><p>写权限。写权限代表的是可在目录内创建、删除文件，而不是指的写目录本身。</p>
+</li>
+<li><p>执行权限。可访问目录中的文件。</p>
+</li>
+</ul>
+<h3 id="文件权限位"><a href="#文件权限位" class="headerlink" title="文件权限位"></a>文件权限位</h3><ol>
+<li>S_IRUSR(S_IREAD) 00400 文件所有者具可读取权限  </li>
+<li>S_IWUSR(S_IWRITE)00200 文件所有者具可写入权限  </li>
+<li>S_IXUSR(S_IEXEC) 00100 文件所有者具可执行权限  </li>
+<li>S_IRGRP 00040  用户组具可读取权限  </li>
+<li>S_IWGRP 00020   用户组具可写入权限  </li>
+<li>S_IXGRP 00010   用户组具可执行权限  </li>
+<li>S_IROTH 00004  其他用户具可读取权限  </li>
+<li>S_IWOTH 00002    其他用户具可写入权限  </li>
+<li>S_IXOTH 00001    其他用户具可执行权限</li>
+</ol>
+<h3 id="获取文件权限"><a href="#获取文件权限" class="headerlink" title="获取文件权限"></a>获取文件权限</h3><pre class="line-numbers language-c++"><code class="language-c++">struct stat st;
+
+stat(path, &st);
+
+st.st_mode & S_IXUSR == 1; *//**可以判断是否可执行*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="其他位"><a href="#其他位" class="headerlink" title="其他位"></a>其他位</h3><ul>
+<li>S_ISUID 04000   用户的id</li>
+<li>S_ISGID 02000   用户组的id</li>
+<li>S_ISVTX 01000   文件的sticky位</li>
+<li>若一目录具有sticky 位 (S_ISVTX), 则表示在此目录下的文件只能被该文件所有者、此目录所有者或root 来删除或改名.</li>
+</ul>
+<h1 id="时间函数"><a href="#时间函数" class="headerlink" title="时间函数"></a>时间函数</h1><p><code>#include &lt;time.h&gt;</code></p>
+<p><code>char *ctime(const time_t *timep);</code></p>
+<ul>
+<li><p>功能:将秒数转换为正常的字符串格式的日历时间</p>
+</li>
+<li><p>参数:timep，这是指向 time_t 对象的指针，该对象包含了一个日历时间。</p>
+</li>
+<li><p>返回值:该函数返回一个 C 字符串，该字符串包含了可读格式的日期和时间信息</p>
+</li>
+</ul>
+<p>•案例</p>
+<p>•    <code>char* time = ctime(&amp;st.st_mtime);//获取最后一次修改时间</code></p>
+<h1 id="Linux下用户的信息"><a href="#Linux下用户的信息" class="headerlink" title="Linux下用户的信息"></a>Linux下用户的信息</h1><p>•在/etc/passwd 文件下保存了用户的信息</p>
+<p>•第一列  用户的名字</p>
+<p>•第二列  用户是不是有密码</p>
+<p>•第三列  用户的id uid</p>
+<p>•第四列  用户的初始组id gid</p>
+<p>•第五列  用户的注释信息</p>
+<p>•第六列  用户的家目录</p>
+<p>•第七列  用户执行的第一个程序</p>
+<p>•一个用户可以属于多个组 一个用户组包含多个用户</p>
+<h1 id="获取用户信息"><a href="#获取用户信息" class="headerlink" title="获取用户信息"></a>获取用户信息</h1><p>•getpwuid(3)</p>
+<p>•#include &lt;sys/types.h&gt;</p>
+<p>•#include &lt;pwd.h&gt;</p>
+<p>•struct passwd *getpwuid(uid_t uid);</p>
+<p>•功能:找到跟uid匹配的用户信息</p>
+<p>•参数:uid:指定要找的用户的id</p>
+<p>•返回值:找不到uid指定的用户或者错误产生NULL如果是错误产生errno的值被设置为相应错误码,找到非NULL</p>
+<h1 id="Linux下的组信息"><a href="#Linux下的组信息" class="headerlink" title="Linux下的组信息"></a>Linux下的组信息</h1><p>•Linux下在/etc/group文件中保存了组的信息</p>
+<p>•第一列 用户组的名字</p>
+<p>•第二列 用户组是否有密码</p>
+<p>•第三列 用户组的组id</p>
+<p>第四列 用户组的成员</p>
+<h1 id="获取组信息"><a href="#获取组信息" class="headerlink" title="获取组信息"></a>获取组信息</h1><p>•<code>#include &lt;sys/types.h&gt;</code></p>
+<p>•<code>#include &lt;grp.h&gt;</code></p>
+<p>•<code>struct group *getgrgid(gid_t gid);</code></p>
+<p>•功能:getgrgid()用来依参数gid 指定的组识别码逐一搜索组文件</p>
+<p>•参数:gid-组id号</p>
+<p>•返回值:返回 group 结构数据, 如果返回NULL 则表示已无数据, 或有错误发生.</p>
+<pre class="line-numbers language-c++"><code class="language-c++">struct group {       
+      char   *gr_name;        /* group name */       
+      char   *gr_passwd;      /* group password */       
+      gid_t   gr_gid;         /* group ID */       
+      char  **gr_mem;  /* NULL-terminated array of     pointer to names of group members */
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="chmod-fchmod"><a href="#chmod-fchmod" class="headerlink" title="chmod/fchmod"></a>chmod/fchmod</h1><p>•<code>#include &lt;sys/stat.h&gt;</code></p>
+<p>•<code>int chmod (  const char* path, // 文件路径  mode_t   mode // 文件权限 );</code></p>
+<p>•<code>int fchmod (  int  fd, // 文件路径  mode_t mode // 文件权限 );</code></p>
+<p>•成功返回0，失败返回-1。</p>
+<p>•mode为以下值的位或(直接写八进制整数形式亦可， 如07654 - rwSr-sr-T)：</p>
+<p>•S_IRUSR(S_IREAD) - 属主可读</p>
+<p>•S_IWUSR(S_IWRITE) - 属主可写</p>
+<p>•S_IXUSR(S_IEXEC) - 属主可执行</p>
+<p>•S_IRGRP      - 属组可读</p>
+<p>•S_IWGRP      - 属组可写</p>
+<p>•S_IXGRP      - 属组可执行</p>
+<p>•S_IROTH      - 其它可读</p>
+<p>•S_IWOTH      - 其它可写</p>
+<p>•S_IXOTH      - 其它可执行</p>
+<h1 id="rename重命名"><a href="#rename重命名" class="headerlink" title="rename重命名"></a>rename重命名</h1><p>•<code>#include &lt;stdio.h&gt;</code></p>
+<p>•<code>int rename(char * oldname, char * newname);</code></p>
+<p><code>功能:用于重命名文件、改变文件路径或更改目录名称，其原型为</code></p>
+<p>•参数:oldname为旧文件名，newname为新文件名。</p>
+<p>•返回值:修改文件名成功则返回0，否则返回-1。</p>
+<h1 id="ftruncate函数"><a href="#ftruncate函数" class="headerlink" title="ftruncate函数"></a>ftruncate函数</h1><p>•<code>#include &lt;unistd.h&gt;</code></p>
+<p><code>•int ftruncate(int fd, off_t length) 。</code></p>
+<p>•功能:改变文件length的大小</p>
+<p>•参数:fd打开的文件描述符，</p>
+<p>•    length想要扩展的文件大小，如果length小于原文件大小，则原文件超过length的内容被删除</p>
+<p>•返回值:成功返回0，失败返回-1，errno被设置</p>
+<h1 id="文件的映射"><a href="#文件的映射" class="headerlink" title="文件的映射"></a>文件的映射</h1><ul>
+<li>mmap的关键点是实现了用户空间和内核空间的数据直接交互而省去了空间不同数据不通的繁琐过程</li>
+</ul>
+<h2 id="mmap函数"><a href="#mmap函数" class="headerlink" title="mmap函数"></a>mmap函数</h2><pre class="line-numbers language-c++"><code class="language-c++">#include <sys/mman.h>
+
+•void* mmap (  
+
+•   void* start, // 映射区内存起始地址// NULL系统自动选定，
+
+•   size_t length, // 字节长度，自动按页(4K)对齐  
+
+•   int  prot,  // 映射权限  
+
+•   int  flags, // 映射标志  
+
+•   int  fd,   // 文件描述符  
+
+off_t offset // 文件偏移量，自动按页(4K)对齐
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>•功能：将文件或设备映射到进程的虚拟地址空间</p>
+<p>•成功返回映射区内存起始地址，失败返回MAP_FAILED(-1)。</p>
+<h3 id="mmap函数参数"><a href="#mmap函数参数" class="headerlink" title="mmap函数参数"></a>mmap函数参数</h3><p>•prot取值：</p>
+<p>•PROT_EXEC - 映射区域可执行。</p>
+<p>•PROT_READ - 映射区域可读取。</p>
+<p>•PROT_WRITE - 映射区域可写入。</p>
+<p>•PROT_NONE - 映射区域不可访问。</p>
+<p>•flags取值：</p>
+<p>•MAP_SHARED  - 对映射区域的写入操作直接反映到文件中。共享映射</p>
+<p>•MAP_PRIVATE  - 对映射区域的写入操作只反映到缓冲区中，        不会真正写入文件。</p>
+<p>MAP_ANONYMOUS - 匿名映射，将虚拟地址映射到物理内存而非文件，忽略fd</p>
+<h2 id="munmap函数参数"><a href="#munmap函数参数" class="headerlink" title="munmap函数参数"></a>munmap函数参数</h2><p>•<code>int munmap(void *addr, size_t length);</code></p>
+<p>•功能：解除文件或设备到进程的虚拟地址空间的映射</p>
+<p>•参数：addr：指定了映射区域的起始地址</p>
+<p>•     length:指定了映射区域的长度</p>
+<p>返回值：成功  返回0错误 -1 errno被设置。</p>
+<h3 id="mmap"><a href="#mmap" class="headerlink" title="mmap"></a>mmap</h3><ul>
+<li><p><strong>一个文件的大小是5000字节，mmap函数从一个文件的起始位置开始，映射5000字节到虚拟内存中。</strong></p>
+<p>•分析：因为单位物理页面的大小是4096字节，虽然被映射的文件只有5000字节，但是对应到进程虚拟地址区域的大小需要满足整页大小，因此mmap函数执行后，实际映射到虚拟内存区域8192个 字节，5000~8191的字节部分用零填充。但是5000-8191写入的字节不会再文件中显示。</p>
+</li>
+<li><p><strong>一个文件的大小是5000字节，mmap函数从一个文件的起始位置开始，映射15000字节到虚拟内存中，即映射大小超过了原始文件的大小。</strong></p>
+<p>•分析：由于文件的大小是5000字节，和情形一一样，其对应的两个物理页。那么这两个物理页都是合法可以读写的，只是超出5000的部分不会体现在原文件中。由于程序要求映射15000字节，而文件只占两个物理页，因此8192字节~15000字节都不能读写，操作时会返回异常。总线错误</p>
+</li>
+<li><p><strong>一个文件初始大小为0，使用mmap操作映射了10004K的大小，即1000个物理页大约4M字节空间，mmap返回指针ptr</strong></p>
+<p>•分析：如果在映射建立之初，就对文件进行读写操作，由于文件大小为0，并没有合法的物理页对应，如同情形二一样，会返回SIGBUS错误。</p>
+<p>•但是如果，每次操作ptr读写前，先增加文件的大小，那么ptr在文件大小内部的操作就是合法的。</p>
+</li>
+</ul>
+<h1 id="目录函数"><a href="#目录函数" class="headerlink" title="目录函数"></a>目录函数</h1><h2 id="opendir函数"><a href="#opendir函数" class="headerlink" title="opendir函数"></a>opendir函数</h2><p><code>#include &lt;sys/types.h&gt;</code></p>
+<p><code>#include &lt;dirent.h&gt;</code></p>
+<p><code>DIR *opendir(const char *name);</code></p>
+<ul>
+<li><p>功能：打开一个文件夹</p>
+</li>
+<li><p>参数：name:指定了要打开的文件夹的名字</p>
+</li>
+<li><p>返回值：错误 NULL errno被设置成功 返回一个指向文件夹流的地址文件夹流的读写位置定位在文件夹的第一个条目</p>
+</li>
+</ul>
+<h2 id="closedir函数"><a href="#closedir函数" class="headerlink" title="closedir函数"></a>closedir函数</h2><p><code>#include &lt;sys/types.h&gt;</code></p>
+<p><code>#include &lt;dirent.h&gt;</code></p>
+<p><code>int closedir(DIR *dirp);</code></p>
+<ul>
+<li><p>功能：关闭一个文件夹</p>
+</li>
+<li><p>参数：dirp:指定要关闭的文件夹流</p>
+</li>
+<li><p>返回值：成功 0错误 -1 errno被设置为合适的错误码</p>
+</li>
+</ul>
+<h2 id="readdir函数"><a href="#readdir函数" class="headerlink" title="readdir函数"></a>readdir函数</h2><p><code>#include &lt;dirent.h&gt;</code></p>
+<p><code>struct dirent *readdir(DIR *dirp);</code></p>
+<ul>
+<li><p>函数功能：表示根据参数指定的位置读取目录中的内容，</p>
+</li>
+<li><p>返回值：成功返回struct dirent类型的指针,失败返回NULL</p>
+</li>
+</ul>
+<pre class="line-numbers language-c++"><code class="language-c++">•struct dirent {   
+
+•   ino_t d_ino; /*i节点编号*/   
+
+•   off_t d_off;  /*在目录文件中的偏移*/   
+
+•   unsigned short d_reclen;/*文件名长*/   
+
+•   unsigned char d_type;/*文件的类型*/   
+
+•   char d_name[256]; /*文件名称*/  
+
+•};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="其他目录操作函数"><a href="#其他目录操作函数" class="headerlink" title="其他目录操作函数"></a>其他目录操作函数</h2><ul>
+<li><p>getcwd() - 获取当前程序所在的工作目录  </p>
+</li>
+<li><p>mkdir()  - 创建一个目录  </p>
+</li>
+<li><p>rmdir()  - 删除一个空目录  </p>
+</li>
+<li><p>chdir()   - 切换目录,它只对该进程有效，而不能影响调用它的那个进程。在退出程序时，shell还会返回开始时的那个工作目录。</p>
+</li>
+</ul>
+<h1 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a><strong>进程管理</strong></h1><h2 id="进程的相关概念"><a href="#进程的相关概念" class="headerlink" title="进程的相关概念"></a>进程的相关概念</h2><p>•程序：主要指存放在硬盘上的可执行文件 ，用来描述要完成的功能。</p>
+<p>•进程：进程是程序实体的运行过程，是系统进行资源分配和调度的一个独立单位。</p>
+<p>•同样一个程序，同一时刻被两次运行，那么他们就是两个独立的进程。</p>
+<p>•系统资源以进程为单位分配，如内存、文件等，操作系统为每个独立的进程分配了独立的地址空间</p>
+<p>•系统采用PID唯一标识一个进程，在每一个时刻都可以保证PID的唯一性，采用延迟重用的策略</p>
+<p>•操作系统将CPU调度给需要的进程，即将CPU的控制权交给某个进程就称为调度。</p>
+<p>•系统中存放进程的管理和控制信息的数据结构称为<a href="https://baike.baidu.com/item/进程控制块/7205297" target="_blank" rel="noopener">进程控制块</a>（PCB Process Control Block）</p>
+<h2 id="时间片轮转算法"><a href="#时间片轮转算法" class="headerlink" title="时间片轮转算法"></a>时间片轮转算法</h2><p>•时间片轮转调度是一种最古老，最简单，最公平且使用最广的算法。每个进程被分配一个时间段，称作它的时间片，即该进程允许运行的时间。如果在时间片结束时进程还在运行，则CPU将被剥夺并分配给另一个进程。如果进程在时间片结束前阻塞或结束，则CPU当即进行切换。调度程序所要做的就是维护一张就绪进程列表，当进程用完它的时间片后，它被移到队列的末尾。</p>
+<h2 id="进程控制块-PCB"><a href="#进程控制块-PCB" class="headerlink" title="进程控制块-PCB"></a>进程控制块-PCB</h2><p>•PCB是系统感知进程存在的唯一标志:进程与PCB一一对应；</p>
+<p>•是进程管理和控制的最重要的数据结构（进程描述信息 、处理机状态信息、进程调度信息、进程控制信息）；</p>
+<p>•进程描述信息</p>
+<p>–进程标识符(pid)，这个标识是唯一的，通常是一个整数</p>
+<p>–进程名，通常基于可执行文件名，这是不唯一的</p>
+<p>–用户标识符(uid)</p>
+<p>–进程组关系</p>
+<h2 id="进程的控制信息"><a href="#进程的控制信息" class="headerlink" title="进程的控制信息"></a>进程的控制信息</h2><p>•当前状态</p>
+<p>•优先级</p>
+<p>•代码执行入口地址</p>
+<p>•程序的磁盘地址</p>
+<p>•运行统计信息（执行时间、页面调度）</p>
+<p>•进程间同步和通信</p>
+<p>•进程的队列指针</p>
+<p>•进程的消息队列指针</p>
+<h2 id="进程三种基本状态"><a href="#进程三种基本状态" class="headerlink" title="进程三种基本状态"></a>进程三种基本状态</h2><p><img src="/img/loading.gif" class="lazyload" data-src="E:%5C2020%E5%A4%A7%E4%BA%8C%5C%E5%9B%BE%E7%89%873.png"  alt=""></p>
+<h2 id="进程的五状态模型"><a href="#进程的五状态模型" class="headerlink" title="进程的五状态模型"></a>进程的五状态模型</h2><p><img src="/img/loading.gif" class="lazyload" data-src="E:%5C2020%E5%A4%A7%E4%BA%8C%5C%E5%9B%BE%E7%89%874.png"  alt=""></p>
+<h2 id="进程的相关命令"><a href="#进程的相关命令" class="headerlink" title="进程的相关命令"></a>进程的相关命令</h2><p>•ps - 查看当前终端中的进程</p>
+<p>•whereis 命令 表示查看指定命令所在的位置</p>
+<p>•ps -aux 表示显示所有包含其他使用者的进程</p>
+<p>•ps -aux | more 表示分屏显示命令执行的结果</p>
+<p>•USER - 用户名,也就是进程的属主  PID - 进程的进程号  %CPU - 进程占用的CPU百分比  %MEM - 进程占用的内存百分比  STAT - 进程的状态信息  TIME - 消耗CPU的时间  COMMAND - 进程的名称</p>
+<p>•其中进程的状态信息主要有：  S 休眠状态    s 进程的领导者  Z 僵尸进程    R 正在运行的  O 可运行状态   T 挂起状态  &lt; 优先级高的进程 N 优先级低的进程  L 有些页被锁进内存， + 位于后台的进程组；</p>
+<p>•ps -ef 表示以全格式的方式显示进程</p>
+<p>•<strong>kill -9</strong> <strong>进程号 表示杀死指定的进程</strong></p>
+<h2 id="父子进程"><a href="#父子进程" class="headerlink" title="父子进程"></a>父子进程</h2><p>•如果进程A启动了进程B，那么进程A叫做进程B的父进程，而进程B叫做进程A的子进程  </p>
+<p>•一般来说，进程0是系统内部的进程，负责启动进程1和进程2,而其他的所有进程都是直接/间接地由进程1和进程2启动起来，而进程1也就是init进程</p>
+<p>•父进程终止子进程也会被终止。</p>
+<p>•如果父进程终止，子进程没终止，这种进程成为孤儿进程，子进程的父进程ID会自动指向init进程</p>
+<p>•如果子进程死亡，父进程存活，并且没有回收子进程的资源，这种子进程被称为僵尸进程。</p>
+<p>•前台后台进程。</p>
+<h2 id="进程的ID获取"><a href="#进程的ID获取" class="headerlink" title="进程的ID获取"></a>进程的ID获取</h2><pre class="line-numbers language-c++"><code class="language-c++">#include <sys/types.h>   
+#include <unistd.h>   
+getpid()   - 表示获取当前进程的进程号   
+getppid() - 表示获取当前进程的父进程ID   
+getuid()   - 表示获取用户ID   
+getgid()   - 表示获取组ID 。
+
+
+#include <stdio.h>
+#include <unistd.h>
+int main(){
+    pid_t pid = getpid();//获取当前程序的进程号
+    pid_t ppid = getppid();//获取当前进程的父进程
+    printf("当前进程ID%d,父进程ID%d\n",pid,ppid);
+    while(1);
+    return 0;
+}
+//ps -ef
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="进程的创建-frok"><a href="#进程的创建-frok" class="headerlink" title="进程的创建-frok"></a>进程的创建-frok</h2><p><code>#include &lt;unistd.h&gt;</code></p>
+<p><code>pid_t fork(void);</code></p>
+<p>•函数功能：表示以复制当前运行进程的方式去创建一个新的子进程。</p>
+<p>•返回值：如果成功父进程返回子进程的PID，子进程返回0,失败返回-1</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;sys/types.h></span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"我是父进程，我的ID是%d\n"</span><span class="token punctuation">,</span><span class="token function">getpid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"我要创建一个子进程\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    pid_t pid <span class="token operator">=</span> <span class="token function">fork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//创建一个子进程,</span>
+   <span class="token comment" spellcheck="true">// printf("我的ID是%d,fork的返回值是%d\n",getpid(),pid);</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>pid<span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"fork"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>pid<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//子进程运行的代码</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"我的ID是%d，我的父进程ID是%d\n"</span><span class="token punctuation">,</span><span class="token function">getpid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">getppid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span><span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"我的ID是%d,我的子进程ID是%d\n"</span><span class="token punctuation">,</span><span class="token function">getpid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>pid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//sleep(1);</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"进程%d要结束了\n"</span><span class="token punctuation">,</span><span class="token function">getpid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="代码执行的方式"><a href="#代码执行的方式" class="headerlink" title="代码执行的方式"></a>代码执行的方式</h3><p>•fork函数之前的代码,父进程执行1次  </p>
+<p>•fork函数之后的代码,父子进程各自执行1次  </p>
+<p>•fork函数的返回值，父子进程各自返回1次,也就是父进程返回子进程的PID,子进程返回0,可以通过返回值区分父子进程</p>
+<p>•父子进程之间的执行顺序是不确定的,由操作系统决定。</p>
+<h2 id="父子进程的资源"><a href="#父子进程的资源" class="headerlink" title="父子进程的资源"></a>父子进程的资源</h2><p>•使用fork创建的进程，也会<strong>分配4G的虚拟空间</strong>，出于效率考虑，linux中引入了“写时复制“技术，也就是只有进程空间的各段的内容要发生变化时，才会将父进程的内容复制一份给子进程，两<strong>者的虚拟空间不同，但其对应的物理空间是同一个。</strong></p>
+<p>•当父子进程中有更改相应段的行为发生时，再为子进程相应的段分配物理空间，内核也会给子进程的数据段、堆栈段分配相应的物理空间，而代码段继续共享父进程的物理空间（两者的代码完全相同）</p>
+<p>•<strong>总结:使用fork创建的子进程会复制父进程中除了代码区之外的其他内存区域，而代码区和父进程共享</strong></p>
+<h2 id="父子进程的关系"><a href="#父子进程的关系" class="headerlink" title="父子进程的关系"></a>父子进程的关系</h2><p>•父进程启动了子进程之后，父子进程同时执行,如果子进程先结束，会给父进程发信号,父进程负责帮助子进程回收子进程的资源（善后）  </p>
+<p>•如果父进程先结束,子进程会变成孤儿进程,子进程会变更父进程为init进程,也就是进程1,init进程叫做孤儿院 ,（Ubuntu会被upstart回收，upstart是在图形化界面下的一个后台的守护程序）</p>
+<p>•如果子进程先结束，但是父进程由于各种原因没有收到子进程发来的信号,没有进行资源的回收，那么子进程变成僵尸进程</p>
+<h2 id="fork函数扩张"><a href="#fork函数扩张" class="headerlink" title="fork函数扩张"></a>fork函数扩张</h2><p>•如何创建4个进程？   </p>
+<p>–fork(); fork(); 调用两次  </p>
+<p>–1个父进程 2个子进程 1个孙子进程 </p>
+<p>•如何创建3个进程？也就是1个父进程 2个子进程   </p>
+<p>–fork(); 1个父进程 和 1个子进程   </p>
+<p>–if(父进程)   {     fork(); 1个父进程 又创建 1个子进程   }</p>
+<p>•俗称：fork炸弹   </p>
+<p>–while(1)   {    </p>
+<p>–fork(); //进程数采用指数级增长方式  </p>
+<p>– }</p>
+<h2 id="进程的终止"><a href="#进程的终止" class="headerlink" title="进程的终止"></a>进程的终止</h2><p>•正常终止</p>
+<p>–在main函数中执行了return 0  </p>
+<p>–调用exit()函数  </p>
+<p>–调用_exit()/_Exit()函数  </p>
+<p>–最后一个线程返回  </p>
+<p>–最后一个线程调用了pthread_exit()函数</p>
+<p>•非正常终止</p>
+<p>–采用信号终止进程</p>
+<p>–最后一个线程被其他线程取消</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//vim exit.c</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
+<span class="token comment" spellcheck="true">//遗言函数-进程结束前会调用的函数</span>
+<span class="token keyword">void</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span><span class="token keyword">void</span><span class="token operator">*</span> argv<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d-%s\n"</span><span class="token punctuation">,</span>argc<span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span><span class="token punctuation">)</span>argv<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//类型强转</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d进程结束了\n"</span><span class="token punctuation">,</span><span class="token function">getpid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//注册遗言函数</span>
+    <span class="token keyword">int</span> i<span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
+    <span class="token function">on_exit</span><span class="token punctuation">(</span>func<span class="token punctuation">,</span><span class="token string">"zhaocb好人"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//模拟进程处理</span>
+    <span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="进程终止函数"><a href="#进程终止函数" class="headerlink" title="进程终止函数"></a>进程终止函数</h2><p><code>#include &lt;unistd.h&gt;</code></p>
+<p><code>void _exit(int status);</code> =&gt; UC函数 </p>
+<p><code>#include &lt;stdlib.h&gt;</code></p>
+<p><code>void _Exit(int status);</code> =&gt; 标C函数</p>
+<p>•函数功能：表示立即终止当前进程。</p>
+<p>•参数为退出状态信息，用于返回给父进程,一般给0表示正常退出,给-1表示非正常退出</p>
+<p><code>#include &lt;stdlib.h&gt;</code></p>
+<p><code>void exit(int status);</code> =&gt; 标C函数</p>
+<p>•函数功能：表示引起当前进程的终止。</p>
+<p>•调用exit函数终止进程的同时，会调用由atexit()和on_exit()函数注册过的函数-遗言函数</p>
+<h2 id="什么是遗言函数？"><a href="#什么是遗言函数？" class="headerlink" title="什么是遗言函数？"></a>什么是遗言函数？</h2><p>•进程终止的时候执行的函数，进程调用return或者exit(3)从main函数返回的时候，执行的函数。</p>
+<p>•遗言函数需要在进程还没有终止以前向进程注册，在进程终止的时候调用。</p>
+<p>•遗言函数的注册顺序和调用顺序相反</p>
+<p>•遗言函数注册一次会被调用一次</p>
+<p>•子进程继承父进程的遗言函数</p>
+<h3 id="atexit和on-exit"><a href="#atexit和on-exit" class="headerlink" title="atexit和on_exit"></a>atexit和on_exit</h3><p><code>#include &lt;stdlib.h&gt;</code></p>
+<p><code>int atexit(void (*function)(void));</code></p>
+<p>•功能：向进程注册遗言函数function</p>
+<p>•参数：function:指定遗言函数的入口地址</p>
+<p>•返回值：成功  0     错误 非0</p>
+<p><code>int on_exit(void (*function)(int , void *), void *arg);</code></p>
+<p>•功能：向进程注册遗言函数function</p>
+<p>•参数：function:指定遗言函数的入口地址</p>
+<p>•   arg:传递给function函数的唯一参数</p>
+<p>•返回值：成功  0     错误 非0</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
+<span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"子进程88\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    pid_t pid <span class="token operator">=</span> <span class="token function">fork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>pid<span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"frok"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>pid<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//子进程</span>
+        <span class="token function">atexit</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//注册遗言函数</span>
+        <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//父进程</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="挂起进程"><a href="#挂起进程" class="headerlink" title="挂起进程"></a>挂起进程</h2><p>•挂起进程在操作系统中可以定义为暂时被淘汰出内存的进程，机器的资源是有限的，在资源不足的情况下，操作系统对在内存中的程序进行合理的安排，其中有的进程被暂时调离出内存，当条件允许的时候，会被操作系统再次调回内存，重新进入等待被执行的状态即就绪态</p>
+<h2 id="进程的阻塞，挂起和睡眠"><a href="#进程的阻塞，挂起和睡眠" class="headerlink" title="进程的阻塞，挂起和睡眠"></a>进程的阻塞，挂起和睡眠</h2><p>•进程运行必然要进行IO操作，IO操作势必要引起等待，在资源未读取完成，进程必然要等待，那么在等待IO完成这个部分就是阻塞状态。所以阻塞是一种被动的方式，由于获取资源获取不到而引起的等待。</p>
+<p>•睡眠就是一种主动的方式，可以用于阻塞，更多的，我们可以在适当的时候设置让进程睡眠/等待一定的时间，这段时间过后，进程必须返回来工作。</p>
+<p>•挂起也是一种主动的行为，挂起是系统层面对进程作出的合理调度。在内存资源不足时，需要把一些进程换出到外存，给着急运行的进程腾地方。挂起倾向于换出阻塞态的进程，也可以是就绪态的进程。只是这个转换几乎不会采用，因为任意时刻，肯定可以找到在内存中的阻塞态进程，但也不能缺少这种直接把就绪转换到挂起的能力。</p>
+<h2 id="wait函数"><a href="#wait函数" class="headerlink" title="wait函数"></a>wait函数</h2><p><code>#include &lt;sys/types.h&gt;</code></p>
+<p><code>#include &lt;sys/wait.h&gt;</code></p>
+<p><code>pid_t wait(int *status);</code></p>
+<p>•函数功能：表示挂起当前正在运行的进程，直到该进程的子进程状态发生改变，而子进程的终止也属于状态发生改变的一种,</p>
+<p>•参数status用于获取子进程终止时的退出状态，</p>
+<p>•成功返回终止的子进程pid，失败返回-1  </p>
+<p>•WIFEXITED(status) - 判断子进程是否正常终止，如果是，它会返回一个非零值。</p>
+<p>• WEXITSTATUS(status) - 获取子进程的正常退出状态信息，如果WIFEXITED返回0，这个值就毫无意义。</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;sys/wait.h></span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    pid_t pid <span class="token operator">=</span> <span class="token function">fork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//创建子进程</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>pid<span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"fork"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>pid<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//子进程运行</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"子进程开始运行%d\n"</span><span class="token punctuation">,</span><span class="token function">getpid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"子进程结束\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//父进程运行</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"父进程开始运行\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        pid_t pid1 <span class="token operator">=</span> <span class="token function">wait</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//等待任意子进程结束</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"i=%d\n"</span><span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//-1`</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"子进程%d结束\n"</span><span class="token punctuation">,</span>pid1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"父进程结束\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> t <span class="token operator">=</span> <span class="token function">WIFEXITED</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//判断是否正常退出</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>t<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"子进程非正常结束\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"子进程正常结束\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">int</span> status <span class="token operator">=</span> <span class="token function">WEXITSTATUS</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//获取退出状态信息</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"退出状态信息为%d\n"</span><span class="token punctuation">,</span>status<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="wait函数详解"><a href="#wait函数详解" class="headerlink" title="wait函数详解"></a>wait函数详解</h3><p>•子进程退出时，内核将子进程置为僵尸状态，这个进程成为僵尸进程，它只保留最小的一些内核数据结构，以便父进程查询子进程的退出状态</p>
+<p>•父进程一旦调用了wait，就立即阻塞自己，由wait自动分析是否当前进程的某个子进程已经退出，如果让它找到了这样一个已经变成僵尸的子进程，wait就会收集这个子进程的信息，并把它彻底销毁后返回；如果没有找到这样一个子进程，wait就会一直阻塞在这里，直到有一个出现为止。</p>
+<h2 id="waitpid函数"><a href="#waitpid函数" class="headerlink" title="waitpid函数"></a>waitpid函数</h2><p><code>pid_t waitpid(pid_t pid, int *status, int options);</code></p>
+<p>•第一个参数：进程号   &lt;-1 表示等待进程组ID为pid绝对值的任何一个子进程(了解)   -1 表示等待任意一个子进程(掌握)   0  表示等待和调用进程同一个进程组的任何一个子进程(了解)     &gt;0  表示等待进程号为PID的子进程(具体某一个，掌握)</p>
+<p>•第二个参数:获取退出状态信息</p>
+<p>•第三个参数:选项,一般给0即可,WNOHANG表示不阻塞</p>
+<p>•返回值：成功返回状态发生改变的子进程PID，失败返回-1</p>
+<p>•函数功能：  表示按照指定的方式等待指定的子进程状态发生改变，并且采用第二个参数获取退出状态信息</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span><span class="token comment" spellcheck="true">//exit()</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h></span></span><span class="token comment" spellcheck="true">//fork</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;sys/wait.h></span></span><span class="token comment" spellcheck="true">//wait  waitpid</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    pid_t pid <span class="token operator">=</span> <span class="token function">fork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>pid<span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"fork1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>pid<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//子进程运行</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d进程运行\n"</span><span class="token punctuation">,</span><span class="token function">getpid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d进程运行结束\n"</span><span class="token punctuation">,</span><span class="token function">getpid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//父进程运行</span>
+        pid_t pid1 <span class="token operator">=</span> <span class="token function">fork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>pid1<span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"fork2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>pid1<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d进程运行\n"</span><span class="token punctuation">,</span><span class="token function">getpid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d进程运行结束\n"</span><span class="token punctuation">,</span><span class="token function">getpid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token function">waitpid</span><span class="token punctuation">(</span>pid1<span class="token punctuation">,</span><span class="token operator">&amp;</span>i<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"父进程结束\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="wait-waitpid工作方式"><a href="#wait-waitpid工作方式" class="headerlink" title="wait/waitpid工作方式"></a>wait/waitpid工作方式</h2><p>•调用wait()/waitpid()函数后,父进程开始等待子进程,而父进程自身进入阻塞状态 </p>
+<p>•如果没有子进程,父进程立即返回  </p>
+<p>•如果有子进程，但是没有已经结束的子进程，父进程保持阻塞状态，直到有一个符合要求的子进程结束为止  </p>
+<p>•如果有符合要求的子进程结束，那么父进程会获取子进程的退出状态信息并且返回</p>
+<h2 id="vfork函数"><a href="#vfork函数" class="headerlink" title="vfork函数"></a>vfork函数</h2><p><code>#include &lt;sys/types.h&gt;</code></p>
+<p><code>#include &lt;unistd.h&gt;</code></p>
+<p><code>pid_t vfork(void);</code></p>
+<p>•函数功能：该函数功能与fork基本相似，所不同的是不会拷贝父进程的内存区域,而是直接占用父进程的存储空间,使得父进程进入阻塞状态，直到子进程结束为止,也就是说子进程先于父进程执行</p>
+<p>•注意: vfork()创建子进程成功后是严禁使用return的，只能调用exit()或者exec族的函数，否则后果不可预料</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h></span></span>
+<span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//pid_t pid = fork();</span>
+    pid_t pid <span class="token operator">=</span> <span class="token function">vfork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//创建一个子进程</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>pid<span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"vfork"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>pid<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">/*
+        printf("子:i=%d\n",i);
+        i=12;*/</span>
+        <span class="token function">execl</span><span class="token punctuation">(</span><span class="token string">"clear"</span><span class="token punctuation">,</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"父:i=%d\n"</span><span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="fork和vfork的区别"><a href="#fork和vfork的区别" class="headerlink" title="fork和vfork的区别"></a>fork和vfork的区别</h2><p>•fork()：子进程拷贝父进程的数据段，堆栈段  </p>
+<p>•vfork()：子进程与父进程共享数据段</p>
+<p>•fork()父子进程的执行次序不确定  </p>
+<p>•vfork 保证子进程先运行，在调用exec 或exit 之前与父进程数据是共享的,在它调用exec或exit 之后父进程才可能被调度运行。</p>
+<h2 id="exec函数族"><a href="#exec函数族" class="headerlink" title="exec函数族"></a>exec函数族</h2><p>•fork()函数通过系统调用创建一个与原来进程几乎完全相同的进程(子进程将获得父进程数据空间,堆,栈等资源。注意，子进程持有的是上述存储空间的“副本”，这意味着父子进程不共享这些存储空间。linux将复制父进程的地址空间内容给子进程，因此，子进程由了独立的地址空间。），也就是这两个进程做完全相同的事。</p>
+<p>•在fork后的子进程中使用exec函数族，可以装入和运行其它程序(子进程替换原有进程,和父进程做不同的事)。</p>
+<p>•exec函数族可以根据指定的文件名或目录名找到可执行文件，并用它来取代原调用进程的数据段、代码段和堆栈段。在执行完后，原调用进程的内容除了进程号外，其它全部被新程序的内容替换了。另外，这里的可执行文件既可以是二进制文件，也可以是Linux下任何可执行脚本文件。</p>
+<h3 id="exec函数原型"><a href="#exec函数原型" class="headerlink" title="exec函数原型"></a>exec函数原型</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">execl</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span>path<span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span>arg<span class="token punctuation">,</span>…<span class="token punctuation">)</span>；
+<span class="token keyword">int</span> <span class="token function">execle</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> path，<span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> arg，<span class="token keyword">char</span> <span class="token operator">*</span> <span class="token keyword">const</span> envp<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>；
+<span class="token keyword">int</span> <span class="token function">execlp</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span>file<span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span>arg<span class="token punctuation">,</span>…<span class="token punctuation">)</span>；
+<span class="token keyword">int</span> <span class="token function">execv</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span>path<span class="token punctuation">,</span><span class="token keyword">char</span><span class="token operator">*</span><span class="token keyword">const</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>；
+<span class="token keyword">int</span> <span class="token function">execve</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> path，<span class="token keyword">char</span> <span class="token operator">*</span> <span class="token keyword">const</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span>，<span class="token keyword">char</span> <span class="token operator">*</span> <span class="token keyword">const</span> envp<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>；
+<span class="token keyword">int</span> <span class="token function">execvp</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> file，<span class="token keyword">char</span> <span class="token operator">*</span> <span class="token keyword">const</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h></span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    pid_t pid <span class="token operator">=</span> <span class="token function">vfork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//创建子进程</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>pid<span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"vfork"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>pid<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//子进程运行</span>
+        <span class="token keyword">char</span><span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">"zhaocb"</span><span class="token punctuation">,</span><span class="token constant">NULL</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">char</span><span class="token operator">*</span> env<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">"PATH=$PATH:."</span><span class="token punctuation">,</span><span class="token constant">NULL</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">execve</span><span class="token punctuation">(</span><span class="token string">"./zhaocb"</span><span class="token punctuation">,</span>argv<span class="token punctuation">,</span>env<span class="token punctuation">)</span><span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">/*if(execl("./zhaocb","zhaocb",NULL)==-1){
+            exit(-1);
+        }*/</span>
+
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//父进程运行</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">100</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"你说的对\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">usleep</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>成功：函数不会返回 失败：返回-1；</li>
+</ul>
+<h4 id="exec函数参数说明"><a href="#exec函数参数说明" class="headerlink" title="exec函数参数说明"></a>exec函数参数说明</h4><p>•path：要执行的程序路径。可以是绝对路径或者是相对路径。</p>
+<p>•file：要执行的程序名称。如果该参数中包含“/”字符，则视为路径名直接执行；否则视为单独的文件名，系统将根据PATH环境变量指定的路径顺序搜索指定的文件。</p>
+<p>•argv：命令行参数的矢量数组。</p>
+<p>•envp：带有该参数的exec函数调用时指定环境变量数组。其他不带该参数的exec函数则使用调用进程的环境变量。</p>
+<p>•arg：程序的第0个参数，即程序名自身。相当于argv[O]。</p>
+<h4 id="exec函数族一般规律"><a href="#exec函数族一般规律" class="headerlink" title="exec函数族一般规律"></a>exec函数族一般规律</h4><p>•exec函数一旦调用成功即执行新的程序，不返回。只有失败才返回，错误值-1。</p>
+<p>•exec函数族名字很相近，使用起来也很相近，它们的一般规律如下：</p>
+<p>•l (list)              命令行参数列表</p>
+<p>•p (path)            搜素file时使用path变量</p>
+<p>•v (vector)          使用命令行参数数组</p>
+<p>•e(environment)    使用环境变量数组,不使用进程原有的环境变量，设置新加载程序运行的环境变量</p>
+<h3 id="execl使用案列"><a href="#execl使用案列" class="headerlink" title="execl使用案列"></a>execl使用案列</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*创建子进程并调用函数execl execl 中希望接收以逗号分隔的参数列表，并以NULL指针为结束标志 */</span> 
+<span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token function">fork</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+<span class="token comment" spellcheck="true">//execl("/bin/ls", "ls","-a", “/home", NULL );</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token function">execl</span><span class="token punctuation">(</span> <span class="token string">"/bin/ls"</span><span class="token punctuation">,</span> <span class="token string">"ls"</span><span class="token punctuation">,</span><span class="token string">"-a"</span><span class="token punctuation">,</span> <span class="token constant">NULL</span> <span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
+           <span class="token function">perror</span><span class="token punctuation">(</span> <span class="token string">"execl error "</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+           <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token number">28</span>     
+     <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="execv使用案列"><a href="#execv使用案列" class="headerlink" title="execv使用案列"></a>execv使用案列</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*创建子进程并调用函数execv,execv中希望接收一个以NULL结尾的字符串数组的指针*/</span>
+<span class="token keyword">char</span> <span class="token operator">*</span>arg<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"ls"</span><span class="token punctuation">,</span> <span class="token string">"-a"</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token function">fork</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>   
+      <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token function">execv</span><span class="token punctuation">(</span> <span class="token string">"/bin/ls"</span><span class="token punctuation">,</span>arg<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      
+             <span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"execv error "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      
+             <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+      <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="execlp使用案列"><a href="#execlp使用案列" class="headerlink" title="execlp使用案列"></a>execlp使用案列</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*创建子进程并调用execlp,execlp中希望接收以逗号分隔的参数列表,并以NULL指针为结束标志,函数进程PATH变量查找子程序文件*/</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token function">fork</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>   
+       <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">execlp</span><span class="token punctuation">(</span><span class="token string">"ls"</span><span class="token punctuation">,</span><span class="token string">"ls"</span><span class="token punctuation">,</span><span class="token string">"-a"</span><span class="token punctuation">,</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      
+              <span class="token function">perror</span><span class="token punctuation">(</span> <span class="token string">"execlp error "</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>      
+              <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+       <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="execvp使用案列"><a href="#execvp使用案列" class="headerlink" title="execvp使用案列"></a>execvp使用案列</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token function">fork</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>   
+      <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token function">execvp</span><span class="token punctuation">(</span> <span class="token string">"ls"</span><span class="token punctuation">,</span> arg <span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>      
+            <span class="token function">perror</span><span class="token punctuation">(</span> <span class="token string">"execvp error "</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>      
+            <span class="token function">exit</span><span class="token punctuation">(</span> <span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>   
+        <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="execle使用案列"><a href="#execle使用案列" class="headerlink" title="execle使用案列"></a>execle使用案列</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*e 函数传递指定环境变量，允许改变子进程的环境，为NULL时，子进程使用当前进程的环境*/</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token function">fork</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>  
+     <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">execle</span><span class="token punctuation">(</span><span class="token string">"/bin/ls"</span><span class="token punctuation">,</span><span class="token string">"ls"</span><span class="token punctuation">,</span><span class="token string">"-a"</span><span class="token punctuation">,</span><span class="token constant">NULL</span><span class="token punctuation">,</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>     
+           <span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"execle error "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     
+           <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+      <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="execve使用案列"><a href="#execve使用案列" class="headerlink" title="execve使用案列"></a>execve使用案列</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token function">fork</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">char</span> <span class="token operator">*</span>envp<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"AA=11"</span><span class="token punctuation">,</span> <span class="token string">"BB=22"</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">execve</span><span class="token punctuation">(</span><span class="token string">"/bin/ls"</span><span class="token punctuation">,</span>arg<span class="token punctuation">,</span>envp<span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"execve error "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="system-函数"><a href="#system-函数" class="headerlink" title="system()函数"></a>system()函数</h2><p><code>#include &lt;stdlib.h&gt;</code></p>
+<p><code>int system(const char *command);</code></p>
+<p>•函数功能：  表示执行参数指定的shell命令/文件</p>
+<p>•详解</p>
+<p>•system()会调用fork()产生子进程，由子进程来调用/bin/sh-c string来执行参数string字符串所代表的命令，此命令执行完后随即返回原调用的进程</p>
+<p>•注意:system()函数要慎用要少用,能不用则不用,system()函数不稳定? </p>
+<h1 id="信号"><a href="#信号" class="headerlink" title="信号"></a><strong>信号</strong></h1><h2 id="中断"><a href="#中断" class="headerlink" title="中断"></a>中断</h2><p>•中断指计算机CPU获知某些事，暂停正在执行的程序，转而去执行处理该事件的程序，当这段程序执行完毕后再继续执行之前的程序。整个过程称为中断处理，简称中断，而引起这一过程的事件称为中断事件。中断是计算机实现并发执行的关键，也是操作系统工作的根本。</p>
+<p>•硬件中断是由与系统相连的外设(比如网卡 硬盘 键盘等)自动产生的</p>
+<p>•软件中断不会直接中断CPU, 也只有当前正在运行的代码(或进程)才会产生软中断. 软中断是一种需要内核为正在运行的进程去做一些事情(通常为I/O)的请求.</p>
+<h2 id="信号-1"><a href="#信号-1" class="headerlink" title="信号"></a>信号</h2><p>•信号是提供异步事件处理机制的软件中断。这些异步事件可能来自硬件设备，如用户同时按下了Ctrl键和C键，也可能来自系统内核，如试图访问尚未映射的虚拟内存，又或者来自用户进程，如尝试计算整数除以0的表达式</p>
+<p>•信号的异步特性不仅表现为它的产生是异步的，对它的处理同样也是异步的。程序的设计者不可能也不需要精确地预见什么时候触发什么信号，也同样无法预见该信号究竟在什么时候会被处理。一切都在内核的操控下，异步地运行。信号是在软件层面对中断机制的一种模拟</p>
+<p>•可以使用kill -l 查看系统提供的信号。</p>
+<h2 id="信号本质"><a href="#信号本质" class="headerlink" title="信号本质"></a>信号本质</h2><p>•<strong>信号本质就是整数值,信号的名称都是以SIG开头,其中linux系统一般表示的信号范围是：1 ~ 64,unix系统一般表示的信号范围是1~48之间</strong></p>
+<p>•掌握的信号：  </p>
+<p>•<strong>ctrl + c  SIGINT  2 默认处理是终止进程</strong>  </p>
+<p><strong>•ctrl + \  SIGQUIT 3 默认处理是终止进程</strong>  </p>
+<p><strong>•kill -9   SIGKILL 9 默认处理也是终止,不允许被捕获</strong></p>
+<h2 id="信号的处理过程"><a href="#信号的处理过程" class="headerlink" title="信号的处理过程"></a>信号的处理过程</h2><p>信号有一个非常明确的生命周期</p>
+<ol>
+<li>– 首先，信号被生成，并被发送至系统内核</li>
+<li>– 其次，系统内核存储信号，直到可以处理它</li>
+<li>– 最后，一旦有空闲，内核即按以下三种方式之一处理信号</li>
+</ol>
+<h2 id="信号的处理方式"><a href="#信号的处理方式" class="headerlink" title="信号的处理方式"></a>信号的处理方式</h2><p>• <strong>忽略信号：什么也不做。SIGKILL和SIGSTOP信号不能忽略</strong></p>
+<p>• <strong>捕获信号：内核暂停收到信号的进程正在执行的代码，跳转到事先注册的信号处理函数，执行该函数并返回，跳回到捕获信号的地方继续执行。SIGKILL和SIGSTOP信号不能捕获</strong></p>
+<p>• <strong>默认操作：不同信号有不同的默认操作，通常是终止收到信号的进程，但也有一些信号的默认操作是视而不见，即忽略。</strong></p>
+<h2 id="信号的诞生"><a href="#信号的诞生" class="headerlink" title="信号的诞生"></a>信号的诞生</h2><p>•信号事件的发生有两个来源：</p>
+<p>•<strong>硬件来源(比如我们按下了键盘或者其它硬件故障)；</strong></p>
+<p>•<strong>软件来源，最常用发送信号的系统函数是aignal, raise, alarm和setitimer以及sigqueue函数，软件来源还包括一些非法运算等操作。</strong></p>
+<h2 id="发出信号的原因简单分类"><a href="#发出信号的原因简单分类" class="headerlink" title="发出信号的原因简单分类"></a>发出信号的原因简单分类</h2><p>•<strong>与进程终止相关的信号。当进程退出，或者子进程终止时，发出这类信号。</strong></p>
+<p>•与进程例外事件相关的信号。如进程越界，或企图写一个只读的内存区域（如程序正文区）</p>
+<p>•<strong>与在系统调用期间遇到不可恢复条件相关的信号。如执行系统调用exec时，原有资源已经释放，而目前系统资源又已经耗尽。</strong></p>
+<p>•与执行系统调用时遇到非预测错误条件相关的信号。如执行一个并不存在的系统调用。</p>
+<p>•<strong>在用户态下的进程发出的信号。如进程调用系统调用kill向其他进程发送信号。</strong></p>
+<p>•与终端交互相关的信号。如用户关闭一个终端</p>
+<p>•跟踪进程执行的信号。</p>
+<h2 id="信号在进程中注册"><a href="#信号在进程中注册" class="headerlink" title="信号在进程中注册"></a>信号在进程中注册</h2><p>•在进程表的表项中有一个软中断信号域，该域中每一位对应一个信号。内核给一个进程发送软中断信号的方法，是在进程所在的进程表项的信号域设置对应于该信号的位。如果信号发送给一个正在睡眠的进程，如果进程睡眠在可被中断的优先级上，则唤醒进程；否则仅设置进程表中信号域相应的位，而不唤醒进程。如果发送给一个处于</p>
+<p>•信号在进程中注册指的就是信号值加入到进程的未决信号集每个信号占用一位）中，并且信号所携带的信息被保留到未决信号信息链的某个结构中。只要信号在进程的未决信号集中，表明进程已经知道这些信号的存在，但还没来得及处理，或者该信号被进程阻塞。可运行状态的进程，则只置相应的域即可。</p>
+<h2 id="可靠信号和不可靠信号"><a href="#可靠信号和不可靠信号" class="headerlink" title="可靠信号和不可靠信号"></a>可靠信号和不可靠信号</h2><p>•当一个实时信号发送给一个进程时，不管该信号是否已经在进程中注册，都会被再注册一次，因此，信号不会丢失，因此，实时信号又叫做”可靠信号”。</p>
+<p>•当一个非实时信号发送给一个进程时，如果该信号已经在进程中注册，则该信号将被丢弃，造成信号丢失。因此，非实时信号又叫做”不可靠信号”。</p>
+<p>•信号注册与否，与发送信号的函数（如kill()或sigqueue()等）以及信号安装函数（signal()及sigaction()）无关，只与信号值有关（信号值小于SIGRTMIN的信号最多只注册一次，信号值在SIGRTMIN及SIGRTMAX之间的信号，只要被进程接收到就被注册）</p>
+<h2 id="可靠信号-不可靠信号"><a href="#可靠信号-不可靠信号" class="headerlink" title="可靠信号/不可靠信号"></a>可靠信号/不可靠信号</h2><p>•<strong>对于linux系统中的信号来说,其中1 ~ 31之间的信号叫做不可靠信号，也就是不支持排队，可能丢失;其中34~64之间的信号叫做可靠信号，支持排队，不会丢失;而不可靠信号又叫做非实时信号,可靠信号叫做实时信号</strong></p>
+<h2 id="信号的注册"><a href="#信号的注册" class="headerlink" title="信号的注册"></a>信号的注册</h2><p>•如果进程要处理某一信号，那么就要在进程中注册该信号。注册信号主要用来确定进程将要处理哪个信号；该信号被传递给进程时，将执行何种操作。</p>
+<p>•linux主要通过signal()函数实现信号的注册。</p>
+<p>•signal()只有两个参数，不支持信号传递信息，主要是用于前32种非实时信号的安装；</p>
+<h2 id="Signal函数"><a href="#Signal函数" class="headerlink" title="Signal函数"></a>Signal函数</h2><p><code>#include &lt;signal.h&gt;</code></p>
+<p><code>typedef void (*sighandler_t)(int);</code></p>
+<p><code>sighandler_t signal(int signum, sighandler_t handler);</code></p>
+<p>•功能：表示对指定的信号设置指定的处理方式</p>
+<p>•参数：signum: 指定信号的编号</p>
+<p>•     handle: 信号处理函数的入口地址</p>
+<p>•返回值：成功  返回原来的信号处理函数的地址</p>
+<p>• 失败 SIG_ERR 将错误的编号设置到error中</p>
+<p>•注意：SIGKILL和SIGSTOP两个信号不能被捕获和忽略。</p>
+<h3 id="Signal详解"><a href="#Signal详解" class="headerlink" title="Signal详解"></a>Signal详解</h3><p>•signal首先是一个函数名为signal的函数，具有两个参数，第一个是int类型,第二个是函数指针类型  返回值类型也是函数指针类型</p>
+<p>•参数和返回值类型都是函数指针类型  指向一个具有Int类型参数,和void类型返回值的函数</p>
+<p>•Signal函数的第二个参数</p>
+<p>–SIG_DFL - 默认处理,绝大多数都是终止进程     </p>
+<p>–SIG_IGN - 忽略处理     </p>
+<p>–函数地址 - 按照指定的函数进行自定义处理</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;signal.h></span></span>
+<span class="token keyword">void</span> <span class="token function">fa</span><span class="token punctuation">(</span><span class="token keyword">int</span> sigia<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//信号值</span>
+     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"信号%d被捕获\n"</span><span class="token punctuation">,</span>sigia<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"游戏即将结束...\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token function">signal</span><span class="token punctuation">(</span>SIGINT<span class="token punctuation">,</span>SIG_DFL<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">signal</span><span class="token punctuation">(</span>SIGINT<span class="token punctuation">,</span>fa<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//注册信号处理函数</span>
+    <span class="token keyword">int</span> x<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> y<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> dx<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> dy<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>x<span class="token operator">></span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            dx <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>x<span class="token operator">&lt;</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            dx <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>y<span class="token operator">></span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            dy<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>y<span class="token operator">&lt;</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            dy <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        x<span class="token operator">+</span><span class="token operator">=</span>dx<span class="token punctuation">;</span>
+        y<span class="token operator">+</span><span class="token operator">=</span>dy<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>y<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//\n</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>x<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//空格</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"@\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"clear"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="父子进程处理信号"><a href="#父子进程处理信号" class="headerlink" title="父子进程处理信号"></a>父子进程处理信号</h2><p>•对于vfork/fork创建的子进程来说,完全照搬父进程对信号的处理方式,也就是说父进程自定义，子进程也自定义处理;父进程忽略，子进程也忽略处理;父进程默认，子进程也默认处理;  </p>
+<p>•如果子进程调用exec族函数，代码将跳转出去，不在和父进程的处理方式一样。</p>
+<h2 id="信号的发送方式"><a href="#信号的发送方式" class="headerlink" title="信号的发送方式"></a>信号的发送方式</h2><p>•采用键盘发送方式(只能发送部分比较特殊的信号)  ctrl+c SIGINT 2  ctrl+\ SIGQUIT 3  …</p>
+<p>•程序出错的发送方式(只能发送部分比较特殊的信号)  段错误  SIGSEGV 11  总线错误 SIGBUS  7  …</p>
+<p>•kill -信号值 进程号(可以发送所有信号)</p>
+<p>• 采用系统函数发送信号  raise()/kill()/alarm()/sigqueue()</p>
+<h2 id="raise函数"><a href="#raise函数" class="headerlink" title="raise函数"></a>raise函数</h2><p><code>#include &lt;signal.h&gt;</code></p>
+<p><code>int raise(int sig);</code></p>
+<p>•函数功能：表示给调用进程/线程发送指定的信号sig.</p>
+<p>•成功返回0,失败返回非0</p>
+<p>•Sig是信号值，当为0时（即空信号），实际不发送任何信号，但照常进行错误检查，因此，可用于检查目标进程是否存在，以及当前进程是否具有向目标发送信号的权限（root权限的进程可以向任何进程发送信号，非root权限的进程只能向属于同一个session或者同一个用户的进程发送信号）。</p>
+<h2 id="kill函数函数"><a href="#kill函数函数" class="headerlink" title="kill函数函数"></a>kill函数函数</h2><p><code>#include &lt;sys/types.h&gt;</code></p>
+<p><code>#include &lt;signal.h&gt;</code></p>
+<p><code>int kill(pid_t pid, int sig);</code></p>
+<p>•第一个参数:进程号&gt; 0 表示给进程号为pid的进程发送信号sig(掌握)  0  表示给与当前进程同一个进程组的每个进程发信号    (了解)  -1 表示给当前进程拥有发送信号权限的每个进程发信    号,进程1除外    (了解)  &lt;-1 表示发送信号给进程组ID为PID的每一个进程(了解)第二个参数:信号值  0 表示不发送信号，而是检查指定进程/进程组是否存在</p>
+<p>•函数功能：表示向指定的进程发送指定的信号</p>
+<h2 id="alarm函数"><a href="#alarm函数" class="headerlink" title="alarm函数"></a>alarm函数</h2><p><code>·#include &lt;unistd.h&gt;</code></p>
+<p><code>unsigned int alarm(unsigned int seconds);</code></p>
+<p>•函数功能：系统调用alarm安排内核为调用进程在指定的seconds秒后发出一个SIGALRM的信号。如果指定的参数seconds为0，则不再发送 SIGALRM信号。后一次设定将取消前一次的设定。该调用返回值为上次定时调用到发送之间剩余的时间，或者因为没有前一次定时调用而返回0。</p>
+<p>•注意，在使用时，alarm只设定为发送一次信号，如果要多次发送，就要多次使用alarm调用。</p>
+<h2 id="pause函数"><a href="#pause函数" class="headerlink" title="pause函数"></a>pause函数</h2><p><code>#include &lt;unistd.h&gt;</code></p>
+<p><code>int pause(void);</code></p>
+<p>•功能：令目前的进程暂停(进入睡眠状态), 直到被信号(signal)所中断。</p>
+<p>•返回值：</p>
+<p>•信号被捕获，信号处理函数被调用之后，猜返回，返回-1，errno被设置</p>
+<h2 id="信号函数总结"><a href="#信号函数总结" class="headerlink" title="信号函数总结"></a>信号函数总结</h2><pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span><span class="token comment" spellcheck="true">//system  srand  rand</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;time.h></span> </span><span class="token comment" spellcheck="true">//time(0)</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;signal.h></span></span>
+<span class="token keyword">int</span> map<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//地图</span>
+<span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//蛇头坐标</span>
+<span class="token keyword">int</span> y <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> dix <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//蛇的移动方向0上1左2右3下</span>
+<span class="token keyword">void</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//打印</span>
+    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"clear"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//</span>
+    <span class="token keyword">int</span> x<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>y<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"**********************\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>x<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span>x<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"*"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>y<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>y<span class="token operator">&lt;</span><span class="token number">20</span><span class="token punctuation">;</span>y<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>map<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"G"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"*\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"**********************\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">move</span><span class="token punctuation">(</span><span class="token keyword">int</span> sig<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//移动</span>
+    map<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">switch</span><span class="token punctuation">(</span>dix<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>x<span class="token operator">&lt;=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                x <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                x<span class="token operator">--</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    map<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    y <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
+    dix <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">move</span><span class="token punctuation">(</span><span class="token number">110</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">usleep</span><span class="token punctuation">(</span><span class="token number">500000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="信号集"><a href="#信号集" class="headerlink" title="信号集"></a>信号集</h2><p>•多个信号组成的信号集合称为信号集</p>
+<p>•系统内核用sigset_t类型表示信号集</p>
+<p>•sigset_t类型是一个结构体，但该结构体中只有一个成员，是一个包含32个元素的整数数组</p>
+<p>–在&lt;sigset.h&gt;中有如下类型定义</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">define</span> _SIGSET_NWORDS (1024 /(8 * sizeof (unsigned long int)))</span>
+ <span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+   <span class="token keyword">unsigned</span> <span class="token keyword">long</span> <span class="token keyword">int</span> __val<span class="token punctuation">[</span>_SIGSET_NWORDS<span class="token punctuation">]</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>  __sigset_t<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>–在&lt;signal.h&gt;中又被定义为<br><code>typedef __sigset_t sigset_t;</code></p>
+<p>•可以把sigset_t类型看成一个由1024个二进制位组成的大整数</p>
+<p>–其中的每一位对应一个信号，其实目前远没有那么多信号</p>
+<p>–某位为1就表示信号集中有此信号，反之为0就是无此信号</p>
+<p>–当需要同时操作多个信号时，常以sigset_t作为函数的参数或返回值的类型<img src="/img/loading.gif" class="lazyload" data-src="E:%5C2020%E5%A4%A7%E4%BA%8C%5C%E5%9B%BE%E7%89%875.png"  alt="图片5"></p>
+<h3 id="信号集基本操作"><a href="#信号集基本操作" class="headerlink" title="信号集基本操作"></a>信号集基本操作</h3><p>•<code>#include &lt;signal.h&gt;</code></p>
+<p>•<code>sigemptyset()</code> - 清空信号集,本质上就是将二进制置为0 </p>
+<p>•<code>sigfillset()</code>- 填满信号集,本质就是二进制置为1 </p>
+<p>•<code>sigaddset()</code> - 填充指定信号到信号集,也就是二进制置为1 </p>
+<p>•<code>sigdelset()</code> - 删除指定信号，也就是指定二进制置为0 </p>
+<p>•<code>sigismember()</code>- 判断信号集中是否存在某个信号,存在返回1,不存在返回0,出错返回-1</p>
+<h4 id="sigfillset"><a href="#sigfillset" class="headerlink" title="sigfillset"></a>sigfillset</h4><p>•<code>#include &lt;signal.h&gt;</code></p>
+<p>•<code>int sigfillset (sigset_t* *sigset*);</code></p>
+<p>–函数功:能填满信号集,即将信号集的全部信号位置1</p>
+<p>–参数：信号集</p>
+<p>–返回值:成功返回0，失败返回-1</p>
+<pre class="line-numbers language-c"><code class="language-c">sigset_t sigset<span class="token punctuation">;</span>
+ <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">sigfillset</span> <span class="token punctuation">(</span><span class="token operator">&amp;</span>sigset<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token function">perror</span> <span class="token punctuation">(</span><span class="token string">"sigfillset"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">exit</span> <span class="token punctuation">(</span>EXIT_FAILURE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="sigemptyset"><a href="#sigemptyset" class="headerlink" title="sigemptyset"></a>sigemptyset</h4><p>•<code>#include &lt;signal.h&gt;</code></p>
+<p>•<code>int sigemptyset (sigset_t* sigset);</code></p>
+<p>–函数功能:清空信号集,即将信号集全部信号位清0</p>
+<p>–参数：信号机</p>
+<p>–返回值：成功返回0，失败返回-1</p>
+<pre class="line-numbers language-c"><code class="language-c">sigset_t sigset<span class="token punctuation">;</span>
+ <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">sigemptyset</span> <span class="token punctuation">(</span><span class="token operator">&amp;</span>sigset<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token function">perror</span> <span class="token punctuation">(</span><span class="token string">"sigemptyset"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">exit</span> <span class="token punctuation">(</span>EXIT_FAILURE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="sigaddset"><a href="#sigaddset" class="headerlink" title="sigaddset"></a>sigaddset</h4><p>•<code>#include &lt;signal.h&gt;</code></p>
+<p>•<code>int sigaddset (sigset_t* sigset, int signum);</code></p>
+<p>–函数功能:加入信号，即将信号集中与指定信号编号对应的信号位置1</p>
+<p>–参数:信号集，信号编号</p>
+<p>–返回值:成功返回0，失败返回-1</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">sigaddset</span> <span class="token punctuation">(</span><span class="token operator">&amp;</span>sigset<span class="token punctuation">,</span> SIGINT<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token function">perror</span> <span class="token punctuation">(</span><span class="token string">"sigaddset"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">exit</span> <span class="token punctuation">(</span>EXIT_FAILURE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="sigdelset"><a href="#sigdelset" class="headerlink" title="sigdelset"></a>sigdelset</h4><p>•<code>#include &lt;signal.h&gt;</code></p>
+<p>•<code>int sigdelset (sigset_t* *sigset*, int *signum*);</code></p>
+<p>–函数功能:删除信号，即将信号集中与指定信号编号对应的信号位清0</p>
+<p>–参数:信号集，信号编号</p>
+<p>–返回值:函成功返回0，失败返回-1</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">sigdelset</span> <span class="token punctuation">(</span><span class="token operator">&amp;</span>sigset<span class="token punctuation">,</span> SIGINT<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token function">perror</span> <span class="token punctuation">(</span><span class="token string">"sigdelset"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">exit</span> <span class="token punctuation">(</span>EXIT_FAILURE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="sigismember"><a href="#sigismember" class="headerlink" title="sigismember"></a>sigismember</h4><p>•<code>#include &lt;signal.h&gt;</code></p>
+<p>•<code>int sigismember (const sigset_t* *sigset*, int *signum*);</code></p>
+<p>–函数功能:判断信号集中是否有某信号，即检查信号集中与指定信号编号对应的信号位是否为1</p>
+<p>–参数:信号集，信号编号</p>
+<p>–返回值:有则返回1，没有返回0，失败返回-1</p>
+<p>•例如</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">sigismember</span> <span class="token punctuation">(</span><span class="token operator">&amp;</span>sigset<span class="token punctuation">,</span> SIGINT<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>
+   <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"信号集中有SIGINT信号\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="递送、未决与掩码"><a href="#递送、未决与掩码" class="headerlink" title="递送、未决与掩码"></a>递送、未决与掩码</h2><p>•当信号产生时，系统内核会在其所维护的进程表中，为特定的进程设置一个与该信号相对应的标志位，这个过程就叫做递送</p>
+<p>•信号从产生到完成递送之间存在一定的时间间隔，处于这段时间间隔中的信号状态称为未决</p>
+<p>•每个进程都有一个信号掩码，它实际上是一个信号集，位于该信号集中的信号一旦产生，并不会被递送给相应的进程，而是会被阻塞在未决状态</p>
+<h2 id="屏蔽信号"><a href="#屏蔽信号" class="headerlink" title="屏蔽信号"></a>屏蔽信号</h2><p>•当进程正在执行类似更新数据库这样的敏感任务时，可能不希望被某些信号中断。这时可以通过信号掩码暂时屏蔽而非忽略掉这些信号。在信号处理函数执行期间，这个正在被处理的信号总是处于信号掩码中，如果又有该信号产生，则会被阻塞，直到上一个针对该信号的处理过程结束以后才会被递送</p>
+<ul>
+<li><p>可以通过sigprocmask函数，检测和修改调用进程的信号掩码。  </p>
+</li>
+<li><p>也可以通过sigpending函数， 获取调用进程当前处于未决状态的信号集</p>
+</li>
+<li><p>在信号处理函数的执行过程中， 这个正在被处理的信号总是处于信号掩码中。</p>
+</li>
+</ul>
+<h3 id="sigprocmask函数"><a href="#sigprocmask函数" class="headerlink" title="sigprocmask函数"></a>sigprocmask函数</h3><p>•<code>#include &lt;signal.h&gt;</code></p>
+<p>•<code>int sigprocmask (int how, const sigset_t* set,  sigset_t* oldset);</code></p>
+<p>•how - 修改信号掩码的方式，可取以下值：</p>
+<ul>
+<li><p>SIG_BLOCK: 新掩码是当前掩码和set的并集  (将set加入信号掩码)；ABC+CDE =&gt; ABCDE</p>
+</li>
+<li><p>SIG_UNBLOCK: 新掩码是当前掩码和set补集的交集 (从信号掩码中删除set)；ABC-CDE =&gt; AB</p>
+</li>
+<li><p>SIG_SETMASK: 新掩码即set(将信号掩码设为set)。ABC CDE =&gt; CDE</p>
+</li>
+</ul>
+<p>•set - NULL则忽略。</p>
+<p>•oset - 备份以前的信号掩码，NULL则不备份。</p>
+<h3 id="sigpending函数"><a href="#sigpending函数" class="headerlink" title="sigpending函数"></a>sigpending函数</h3><p>•<code>#include &lt;signal.h&gt;</code></p>
+<p>•<code>int sigpending(sigset_t *set);</code></p>
+<p>•函数功能：表示获取信号屏蔽期间来过的信号，通过参数set带出去</p>
+<h1 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h1><p>•运行一个进程所消耗的时间包括三个部分</p>
+<ul>
+<li><p>用户时间：进程消耗在用户态的时间</p>
+</li>
+<li><p>内核时间：进程消耗在内核态的时间</p>
+</li>
+<li><p>睡眠时间： 进程消耗在等待I/O、睡眠等不被调度的时间</p>
+</li>
+</ul>
+<p>•系统内核为系统中的每个进程维护三个计时器</p>
+<ul>
+<li><p>真实计时器：统计进程的执行时间</p>
+</li>
+<li><p>虚拟计时器：统计进程的用户时间</p>
+</li>
+<li><p>实用计时器：统计进程的用户时间和内核时间之和</p>
+</li>
+</ul>
+<h2 id="为进程设定计时器"><a href="#为进程设定计时器" class="headerlink" title="为进程设定计时器"></a>为进程设定计时器</h2><p>•三个系统计时器除了统计进程的各种时间以外，还可以按照各自的计时规则，以定时器的方式工作，向进程周期性地发送不同的信号</p>
+<p>–<strong>SIGALRM  (14)</strong>：真实定时器到期</p>
+<p>–<strong>SIGVTALRM (26)</strong>：虚拟定时器到期</p>
+<p>–<strong>SIGPROF  (27)</strong>：实用定时器到期</p>
+<p>•定时器在可以发送信号之前，必须先行设置。每个定时器均包括两个属性，需要在设置时初始化好</p>
+<p>–初始间隔：从设置定时器到它首次发出信号的时间间隔</p>
+<p>–重复间隔：定时器发出的两个相邻信号之间的时间间隔</p>
+<h2 id="设置计时器"><a href="#设置计时器" class="headerlink" title="设置计时器"></a>设置计时器</h2><p>•<code>#include &lt;sys/time.h&gt;</code></p>
+<p>•<code>int setitimer (int which,  const struct itimerval* new_value,  struct itimerval* old_value);</code></p>
+<p>•设置计时器。成功返回0，失败返回-1。</p>
+<p>•which   - 指定哪个计时器，取值：</p>
+<p>–ITIMER_REAL: 真实计时器；  </p>
+<p>–ITIMER_VIRTUAL: 虚拟计时器；  </p>
+<p>–ITIMER_PROF: 实用计时器。</p>
+<p>•new_value - 新的设置。</p>
+<p>•old_value - 旧的设置(可为NULL)。</p>
+<h2 id="设定计时器"><a href="#设定计时器" class="headerlink" title="设定计时器"></a>设定计时器</h2><pre class="line-numbers language-c"><code class="language-c">•<span class="token keyword">struct</span> itimerval <span class="token punctuation">{</span>  
+
+–<span class="token keyword">struct</span> timeval it_interval<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 重复间隔(每两个时钟信号的时间间隔)，  // 取0将使计时器在发送第一个信号后停止  </span>
+
+–<span class="token keyword">struct</span> timeval it_value<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 初始间隔(从调用setitimer函数到第一次发送  // 时钟信号的时间间隔)，取0将立即停止计时器</span>
+
+–<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">struct</span> timeval <span class="token punctuation">{</span>  
+
+–<span class="token keyword">long</span> tv_sec<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 秒数  </span>
+
+–<span class="token keyword">long</span> tv_usec<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 微秒数 </span>
+–<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a><strong>进程间通信</strong></h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>•进程间通信(Interprocess Communication, IPC)是指两个， 或多个进程之间进行数据交换的过程。</p>
+<p>•XSI（System Interface and Headers），代表一种Unix/Linux系统的标准</p>
+<h2 id="进程间的通信方式"><a href="#进程间的通信方式" class="headerlink" title="进程间的通信方式"></a>进程间的通信方式</h2><p>•(1)文件</p>
+<p>•(2)信号 </p>
+<p>•(3)管道</p>
+<p>•(4)共享内存 </p>
+<p>•(5)消息队列(重点)</p>
+<p>•(6)信号量 </p>
+<p>•(7)网络(重点)</p>
+<h2 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h2><p>•管道是Unix系统最古老的进程间通信方式。</p>
+<p>•管道本质还是文件,是一种比较特殊的文件。</p>
+<p>•管道的特质</p>
+<p>–其本质是一个伪文件(实为内核缓冲区,管道文件在磁盘上只有i节点没有数据块，也不保存数据)</p>
+<p>–由两个文件描述符引用，一个表示读端，一个表示写端。可定义一个文件描述符数组，存取。</p>
+<p>–规定数据从管道的写端流入管道，从读端流出。</p>
+<p>–数据自己读不能自己写，数据一旦被读走，便不在管道中存在，不可反复读取。 由于管道采用半双工通信方式。因此，数据也只能在一个方向上流动。</p>
+<h3 id="管道的分类"><a href="#管道的分类" class="headerlink" title="管道的分类"></a>管道的分类</h3><p>•管道分为两大类：有名管道 和 无名管道 </p>
+<p>•有名管道：主要由程序员手动创建一个管道文件，实现任意两个进程间的通信  </p>
+<p>•无名管道：主要由系统创建，用于父子进程之间的通信</p>
+<p>•历史上的管道通常是指半双工管道，只允许数据单向流动。</p>
+<p>•现代系统大都提供全双工管道， 数据可以沿着管道双向流动。</p>
+<h3 id="有名管道"><a href="#有名管道" class="headerlink" title="有名管道"></a>有名管道</h3><p>•有名管道(fifo)：基于有名文件(管道文件)的管道通信。它的路径名存在于文件系统中。</p>
+<p>•可以通过mkfifo命令可以创建管道文件</p>
+<p>–形式:mkfifo 管道文件名</p>
+<p>•可以通过管道文件让两个shell之间通信</p>
+<p>–1打开两个终端，工作路径切换到一致</p>
+<p>–2在其中任意一个终端创建文件</p>
+<p>–3在A终端中使用 cat 管道文件</p>
+<p>–4在B终端中使用 echo 文件 &gt; 管道文件</p>
+<h3 id="编程模型"><a href="#编程模型" class="headerlink" title="编程模型"></a>编程模型</h3><p>•基于有名管道实现进程间通信的编程模型</p>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>进程A</th>
+<th>函数</th>
+<th>进程B</th>
+<th>步骤</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>创建管道</td>
+<td>mkfifo</td>
+<td>——</td>
+<td>——</td>
+</tr>
+<tr>
+<td>2</td>
+<td>打开管道</td>
+<td>open</td>
+<td>打开管道</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>读写管道</td>
+<td>read/write</td>
+<td>读写管道</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>关闭管道</td>
+<td>close</td>
+<td>关闭管道</td>
+<td>3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>删除管道</td>
+<td>unlink</td>
+<td>——</td>
+<td>——</td>
+</tr>
+</tbody></table>
+<p>•其中除了mkfifo函数是专门针对有名管道的，其它函数都与操作普通文件没有任何差别</p>
+<p>•有名管道是文件系统的一部分，如不删除，将一直存在</p>
+<h3 id="创建有名管道文件"><a href="#创建有名管道文件" class="headerlink" title="创建有名管道文件"></a>创建有名管道文件</h3><p>•<code>#include &lt;sys/stat.h&gt;</code></p>
+<p>•<code>int mkfifo(const char* *pathname*, mode_t *mode*);</code></p>
+<p>•函数功能：创建有名管道文件</p>
+<p>•参数</p>
+<p>–pathname：文件路径</p>
+<p>–mode：权限模式</p>
+<p>•返回值：成功返回0，失败返回-1</p>
+<h3 id="无名管道"><a href="#无名管道" class="headerlink" title="无名管道"></a>无名管道</h3><p>•无名管道(pipe)：适用于父子进程之间的通信。</p>
+<p>•<code>#include &lt;unistd.h&gt;</code></p>
+<p>•<code>int pipe (int pipefd[2]);</code></p>
+<p>•函数功能：通过输出参数pipefd返回两个文件描述符，其中pipefd[0]用于读，pipefd[1]用于写</p>
+<p>•返回值:成功返回0，失败返回-1。</p>
+<h3 id="无名管道的使用"><a href="#无名管道的使用" class="headerlink" title="无名管道的使用"></a>无名管道的使用</h3><p>•A. 调用该函数在内核中创建管道文件，并通过其输出参数，  获得分别用于读和写的两个文件描述符；</p>
+<p>•B. 调用fork函数，创建子进程；</p>
+<p>•C. 写数据的进程关闭读端(pipefd[0])，  读数据的进程关闭写端(pipefd[1])；</p>
+<p>•D. 传输数据；</p>
+<p>•E. 父子进程分别关闭自己的文件描述符。</p>
+<h2 id="XSI进程间通信"><a href="#XSI进程间通信" class="headerlink" title="XSI进程间通信"></a>XSI进程间通信</h2><p>•XSI IPC源自于system V的IPC功能。</p>
+<p>•有三种IPC我们称作XSI IPC，即消息队列、信号量以及共享存储器，它们之间有很多相似之处。</p>
+<p>•共享内存，消息队列，信号量它们三个都是找一个中间介质，来进行通信的，这种介质多的是。但是必须保证唯一，就像身份证。</p>
+<h2 id="IPC对象的标识符和键"><a href="#IPC对象的标识符和键" class="headerlink" title="IPC对象的标识符和键"></a>IPC对象的标识符和键</h2><p>•为了实现进程之间的数据交换，系统内核会为参与通信的诸方维护一个内核对象(类似一个结构体变量)，记录和通信有关的各种配置参数和运行时信息，谓之IPC对象。</p>
+<p>•系统中的每个IPC对象都有唯一的，非负整数形式的标识符（ID），所有与IPC相关的操作，都需要提供IPC对象标识符。IPC对象通过它的标识符来引用和访问通信通道</p>
+<p>•与文件描述符不同，IPC标识在使用时会持续加1， 当达到最大值时，向0回转。（65535）</p>
+<h2 id="IPC对象的标识符和键-1"><a href="#IPC对象的标识符和键-1" class="headerlink" title="IPC对象的标识符和键"></a>IPC对象的标识符和键</h2><p>•IPC的标识符只解决了内部访问一个IPC对象的问题，如何让多个进程都访问某一个特定的IPC对象还需要一个外部键（key），每一个IPC对象都与一个键相关联 。</p>
+<p>•无论何时，只要创建IPC对象，就必须指定一个键值。  </p>
+<p>•键值的数据类型在sys/types.h头文件中被定义为key_t，其原始类型就是长整型。</p>
+<h2 id="IPC对象的会-汇-合"><a href="#IPC对象的会-汇-合" class="headerlink" title="IPC对象的会(汇)合"></a>IPC对象的会(汇)合</h2><p>•键值到<a href="https://baike.baidu.com/item/标识符" target="_blank" rel="noopener">标识符</a>的转换是由系统<a href="https://baike.baidu.com/item/内核" target="_blank" rel="noopener">内核</a>来维护的。当有了一个IPC对象的键值，如何让多个进程知道这个键?大致有三种方式</p>
+<h2 id="IPC对象的会合方式"><a href="#IPC对象的会合方式" class="headerlink" title="IPC对象的会合方式"></a>IPC对象的会合方式</h2><p>•服务器进程可以用IPC_PRIVATE宏(通常被定义为0)作为键创建一个新的IPC对象，将返回的标识符放在某处，例如一个文件中，以方便客户机取用。IPC_PRIVATE宏可以保证所得到的IPC对象一定是新建的，而不是现有的</p>
+<p>–IPC对象标识符可以被fork函数产生的子进程直接引用，也可以作为命令行参数或者环境变量的一部分被exec函数传递给新创建的进程，这样就避免了读写文件之类的开销。</p>
+<p>•将键作为宏或者外部变量定义在一个公共头文件中。服务器和客户机都包含该头文件，服务器用这个键创建IPC对象，而客户机用这个键获取服务器所创建的IPC对象</p>
+<p>–键可能已经与某个现有的IPC对象结合，服务器在创建IPC对象时必须处理这种情况，比如删除现有的对象后再重试</p>
+<p>•服务器和客户机用一对约定好的路径和项目ID(0-255)，通过ftok函数合成一个键，用于创建和获取IPC对象</p>
+<p>•#include &lt;sys/ipc.h&gt;</p>
+<p>•key_t ftok (const char* pathname, int proj_id);</p>
+<p>•成功返回可用于创建或获取IPC对象的键，失败返回-1</p>
+<p>–<strong>pathname</strong>：一个真实存在的路径名</p>
+<p>–<strong>proj_id</strong>：项目ID，仅低8位有效，取0到255之间的数</p>
+<h2 id="ftok函数详解"><a href="#ftok函数详解" class="headerlink" title="ftok函数详解"></a>ftok函数详解</h2><p>•ftok创建的键通常是下列方式构成的：</p>
+<p>–获取第一个参数的stat结构从该结构中取st_dev和st_ino字段，然后再与项目ID组合起来。</p>
+<p>•ftok的参数注意</p>
+<p>–ftok根据路径名，提取文件信息，再根据这些文件信息及id合成key，该路径可以随便设置。</p>
+<p>–pathname指定的目录或文件必须存在的，ftok只是根据文件inode在系统内的唯一性来取一个数值，和文件的权限无关。</p>
+<p>–id是可以根据自己的约定，随意设置。在UNIX系统上,它的取值是1到255。</p>
+<h2 id="XSI-ipc的实现步骤"><a href="#XSI-ipc的实现步骤" class="headerlink" title="XSI ipc的实现步骤"></a>XSI ipc的实现步骤</h2><p>•获取ipc对象的键值（通过IPC_PRIVATE宏，指定公共文件，ftok函数生成）</p>
+<p>•创建/获取IPC对象（共享内存，消息队列，信号量），获取ipc标识</p>
+<p>•加载通信内存/队列/信号</p>
+<p>•读写操作</p>
+<p>•销毁通信内存/队列/信号</p>
+<h2 id="相关命令"><a href="#相关命令" class="headerlink" title="相关命令"></a>相关命令</h2><p>•ipcs可用来显示当前Linux系统中的共享内存段、信号量集、消息队列等的使用情况。命令示例：</p>
+<p>•ipcs -a或ipc 显示当前系统中共享内存段、信号量集、消息队列的使用情况；</p>
+<p>•ipcs -m 显示共享内存段的使用情况；</p>
+<p>•ipcs -s 显示信号量集的使用情况；</p>
+<p>•ipcs -q 显示消息队列的使用情况；</p>
+<p>•ipcs –p 命令可以得到与共享内存、消息队列相关进程之间的消息</p>
+<p>•ipcs -u命令可以查看各个资源的使用总结信息。</p>
+<p>•ipcs -l命令可以查看各个资源的系统限制信息。</p>
+<h1 id="共享内存"><a href="#共享内存" class="headerlink" title="共享内存"></a>共享内存</h1><p>•两个或者更多进程，共享同一块由系统内核负责维护的内存区域，其地址空间通常被映射到堆和栈之间（MMAP）</p>
+<p><img src="/img/loading.gif" class="lazyload" data-src="E:%5C2020%E5%A4%A7%E4%BA%8C%5C%E5%9B%BE%E7%89%876.png"  alt=""></p>
+<p>•多个进程通过共享内存通信，所传输的数据通过各个进程的虚拟内存被直接反映到同一块物理内存中，这就避免了在不同进程之间来回复制数据的开销。因此，基于共享内存的进程间通信，是速度最快的进程间通信方式</p>
+<p>•共享内存本身缺乏足够的同步机制，这就需要程序员编写额外的代码来实现。例如服务器进程正在把数据写入共享内存，在这个写入过程完成之前，客户机进程就不能读取该共享内存中的数据。为了建立进程之间的这种同步，可能需要借助于其它的进程间通信机制，如信号或者信号量等，甚至文件锁，而这无疑会增加系统开销</p>
+<h2 id="编程模型-1"><a href="#编程模型-1" class="headerlink" title="编程模型"></a>编程模型</h2><p><img src="/img/loading.gif" class="lazyload" data-src="E:%5C2020%E5%A4%A7%E4%BA%8C%5C%E5%9B%BE%E7%89%877png.png"  alt="图片7png"></p>
+<h2 id="shmget"><a href="#shmget" class="headerlink" title="shmget"></a>shmget</h2><p>•<code>#include &lt;sys/shm.h&gt;</code></p>
+<p>•<code>int shmget (key_t key, size_t size, int shmflg);</code></p>
+<p>•函数功能：创建新的或获取已有的共享内存</p>
+<p>•成功返回共享内存标识符，失败返回-1。</p>
+<h2 id="shmget参数详解"><a href="#shmget参数详解" class="headerlink" title="shmget参数详解"></a>shmget参数详解</h2><p>•Key：该函数以key参数为键值创建共享内存，  或获取已有的共享内存。Key为ftok返回值</p>
+<p>•size参数为共享内存的字节数，建议取内存页字节数(4096)的整数倍。若希望创建共享内存，则必需指定size参数。若只为获取已有的共享内存，则size参数可取0。</p>
+<p>•shmflg取值：</p>
+<p>–0         - 获取，不存在即失败。</p>
+<p>–IPC_CREAT - 创建，不存在即创建，已存在即获取，</p>
+<p>–IPC_EXCL   - 排斥，已存在即失败</p>
+<p>–mode：    - 权限</p>
+<h2 id="shmat"><a href="#shmat" class="headerlink" title="shmat"></a>shmat</h2><p>•<code>#include &lt;sys/shm.h&gt;</code></p>
+<p>•<code>void *shmat(int shmid, const void *addr, int flag);</code></p>
+<p>•功能：加载共享内存</p>
+<p>•shmid：共享存储的id shmget函数的返回值</p>
+<p>•addr：一般为0，表示连接到由内核选择可用地址上，否则，如果flag没有指定SHM_RND，则连接到addr所指定的地址上.<br> Flag:0- 以读写方式使用共享内存.SHM_RDONLY - 以只读方式使用共享内存.SHM_RND  - 只在shmaddr参数非NULL时起作用。 表示对该参数向下取内存页的整数倍作为映射地址。<br> 返回值：如果成功，返回共享存储段地址，出错返回-1</p>
+<p>•shmat函数负责将给定共享内存映射到调用进程的虚拟内存空间，返回映射区的起始地址，同时将系统内核中共享内存对象的加载计数(shmid_ds::shm_nattch)加一</p>
+<p>•调用进程在获得shmat函数返回的共享内存起始地址以后，就可以象访问普通内存一样访问共享内存中的数据</p>
+<h2 id="shmdt"><a href="#shmdt" class="headerlink" title="shmdt"></a>shmdt</h2><p>•<code>#include &lt;sys/shm.h&gt;</code></p>
+<p>•<code>int shmdt(void *addr);</code></p>
+<p>•功能:shmdt函数负责从调用进程的虚拟内存中解除shmaddr所指向的映射区到共享内存的映射，同时将系统内核中共享内存对象的加载计数(shmid_ds::shm_nattch)减一。</p>
+<p>•成功返回0，失败返回-1。</p>
+<h2 id="shmctl"><a href="#shmctl" class="headerlink" title="shmctl"></a>shmctl</h2><p>•<code>#include &lt;sys/shm.h&gt;</code></p>
+<p>•<code>int shmctl (int shmid, int cmd, struct shmid_ds* buf);</code></p>
+<p>•功能:销毁或控制共享内存</p>
+<p>•返回值：成功返回0，失败返回-1</p>
+<h2 id="Shmctl参数"><a href="#Shmctl参数" class="headerlink" title="Shmctl参数"></a>Shmctl参数</h2><p>–<strong>cmd</strong>：控制命令，可取以下值<br> <strong>IPC_STAT</strong>-获取共享内存的属性,通过<strong>buf</strong>参数输出<br> <strong>IPC_SET</strong>-设置共享内存的属性,通过<strong>buf</strong>参数输入，仅以下三个属性可以设置<br> <strong>shmid_ds</strong>::shm_perm.uid** // 拥有者用户ID**<br> <strong>shmid_ds::shm_perm.gid</strong> // 拥有者组ID**<br><strong>shmid_ds</strong>::shm_perm.mode** // 权限**<br><strong>IPC_RMID</strong> - 销毁共享内存。其实并非真的销毁，而只是做一个销毁标记，禁止任何进程对该共享内存形成新的加载，但已有的加载依然保留。只有当其使用者们纷纷卸载，直至其加载计数降为0时，共享内存才会真的被销毁</p>
+<p>–<strong>buf</strong>：shmid_ds类型的共享内存属性结构</p>
+<h2 id="shmid-ds结构"><a href="#shmid-ds结构" class="headerlink" title="shmid_ds结构"></a>shmid_ds结构</h2><p>• shmid_ds数据结构表示每个新建的共享内存。</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">struct</span> shmid_ds <span class="token punctuation">{</span>  
+
+<span class="token keyword">struct</span> ipc_perm shm_perm<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 所有者及其权限  </span>
+
+size_t shm_segsz<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 大小(以字节为单位)  </span>
+
+time_t shm_atime<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 最后加载时间  </span>
+
+time_t shm_dtime<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 最后卸载时间  </span>
+
+time_t shm_ctime<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 最后改变时间  </span>
+
+pid_t shm_cpid<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 创建进程PID  </span>
+
+pid_t shm_lpid<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 最后加载/卸载进程PID  </span>
+
+shmatt_t shm_nattch<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 当前加载计数 有多少个进程正在使用这块内存 </span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="ipc-perm结构"><a href="#ipc-perm结构" class="headerlink" title="ipc_perm结构"></a>ipc_perm结构</h2><p>•对于每个IPC对象，系统共用一个struct ipc_perm的数据结构来存放权限信息，以确定一个ipc操作是否可以访问该IPC对象。</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">struct</span> ipc_perm <span class="token punctuation">{</span>  
+
+–key_t __key<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 键值  </span>
+
+–uid_t uid<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 有效属主ID  </span>
+
+–gid_t gid<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 有效属组ID  </span>
+
+–uid_t cuid<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 有效创建者ID  </span>
+
+–gid_t cgid<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 有效创建组ID  </span>
+
+–<span class="token keyword">unsigned</span> <span class="token keyword">short</span> mode<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 权限字  </span>
+
+–<span class="token keyword">unsigned</span> <span class="token keyword">short</span> __seq<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 序列号</span>
+
+ <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h1><p>•消息队列是由消息组成由消息队列标识符标识的链表，存放在内核中由系统内核负责存储和管理.(消息队列，就是一个消息的链表，把每次要进行传递的消息/数据按照固定的格式写成一个结构体，由内核存储，维护成一个队列链表）。</p>
+<p><img src="/img/loading.gif" class="lazyload" data-src="E:%5C2020%E5%A4%A7%E4%BA%8C%5C%E5%9B%BE%E7%89%878.png"  alt=""></p>
+<p>•消息队列中的每个消息单元除包含消息数据外，还包含消息类型和数据长度。内核为每个消息队列，维护一个msqid_ds结构体形式的消息队列对象。</p>
+<p>•相较于其它几种IPC机制，消息队列具有明显的优势</p>
+<h2 id="•流量控制"><a href="#•流量控制" class="headerlink" title="•流量控制"></a>•流量控制</h2><p>–如果系统资源(内存)短缺或者接收消息的进程来不及处理更多的消息，则发送消息的进程会在系统内核的控制下进入睡眠状态，待条件满足后再被内核唤醒，继续之前的发送过程</p>
+<h3 id="•面向记录"><a href="#•面向记录" class="headerlink" title="•面向记录"></a>•面向记录</h3><p>–每个消息都是完整的信息单元，发送端是一个消息一个消息地发，接收端也是一个消息一个消息地收，而不象管道那样收发两端所面对的都是字节流，彼此间没有结构上的一致性</p>
+<h2 id="消息队列特点"><a href="#消息队列特点" class="headerlink" title="消息队列特点"></a>消息队列特点</h2><h3 id="•类型过滤"><a href="#•类型过滤" class="headerlink" title="•类型过滤"></a>•类型过滤</h3><p>–先进先出是队列的固有特征，但消息队列还支持按类型提取消息的做法，这就比严格先进先出的管道具有更大的灵活性</p>
+<h3 id="•天然同步"><a href="#•天然同步" class="headerlink" title="•天然同步"></a>•天然同步</h3><p>–消息队列本身就具备同步机制，空队列不可读，满队列不可写，不发则不收，无需象共享内存那样编写额外的同步代码</p>
+<h2 id="编程模型-2"><a href="#编程模型-2" class="headerlink" title="编程模型"></a>编程模型</h2><table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>进程A</th>
+<th>函数</th>
+<th>进程B</th>
+<th>步骤</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>创建消息队列</td>
+<td>msgget</td>
+<td>获取消息队列</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>发送接收消息</td>
+<td>msgsnd/msgrcv</td>
+<td>发送接收消息</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>销毁消息队列</td>
+<td>msgctl</td>
+<td>—-</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>•可以通过msgget函数创建一个新的消息队列，或获取一个已有的消息队列。通过msgsnd函数向消息队列的后端追加消息，通过msgrcv函数从消息队列的前端提取消息。</p>
+<h2 id="创建-获取消息队列-msgget"><a href="#创建-获取消息队列-msgget" class="headerlink" title="创建/获取消息队列 msgget"></a>创建/获取消息队列 msgget</h2><p>•#include &lt;sys/msg.h&gt;</p>
+<p>•int msgget (key_t key, int msgflg);</p>
+<p>•功能:该函数以key参数为键值创建消息队列,或获取已有的消息队列。</p>
+<p>•msgflg取值：</p>
+<p>•0 - 获取，不存在即失败。</p>
+<p>•IPC_CREAT - 创建，不存在即创建，已存在即获取，除非…</p>
+<p>•IPC_EXCL - 排斥，已存在即失败。</p>
+<p>•成功返回消息队列标识，失败返回-1</p>
+<h2 id="向消息队列发送消息msgsnd"><a href="#向消息队列发送消息msgsnd" class="headerlink" title="向消息队列发送消息msgsnd"></a>向消息队列发送消息msgsnd</h2><p>•int msgsnd (int msqid, const void* msgp, size_t msgsz, int msgflg);</p>
+<p>•msgp参数指向一个包含消息类型和消息数据的内存块。该内存块的前4个字节必须是一个大于0的整数，  代表消息类型，其后紧跟消息数据。消息数据的字节长度用msgsz参数表示。</p>
+<p>•注意：msgsz参数并不包含消息类型的字节数(4)。</p>
+<h2 id="向消息队列发送消息1"><a href="#向消息队列发送消息1" class="headerlink" title="向消息队列发送消息1"></a>向消息队列发送消息1</h2><p>•若内核中的消息队列缓冲区有足够的空闲空间，则此函数会将消息拷入该缓冲区并立即返回0，表示发送成功，否则此函数会阻塞，直到内核中的消息队列缓冲区有足够的空闲空间为止(比如有消息被接收)。</p>
+<p>•若msgflg参数包含IPC_NOWAIT位，则当内核中的消息队列缓冲区没有足够的空闲空间时，此函数不会阻塞，而是返回-1，errno为EAGAIN。</p>
+<p>•成功返回0，失败返回-1</p>
+<h2 id="从消息队列接受消息"><a href="#从消息队列接受消息" class="headerlink" title="从消息队列接受消息"></a>从消息队列接受消息</h2><p>•ssize_t msgrcv (int msqid, void* msgp, size_t msgsz, long msgtyp, int msgflg);</p>
+<p>•msgp参数指向一个包含消息类型(4字节)，和消息数据的内存块，其中消息数据缓冲区的字节大小用msgsz参数表示。</p>
+<p>•若所接收到的消息数据字节数大于msgsz参数,即消息太长，且msgflg参数包含MSG_NOERROR位，则该消息被截取msgsz字节返回，剩余部分被丢弃。</p>
+<p>•若msgflg参数不包含MSG_NOERROR位，消息又太长，  则不对该消息做任何处理，直接返回-1，errno为E2BIG。</p>
+<h2 id="从消息队列接受消息1"><a href="#从消息队列接受消息1" class="headerlink" title="从消息队列接受消息1"></a>从消息队列接受消息1</h2><p>•msgtyp参数表示期望接收哪类消息：</p>
+<p>•=0 - 返回消息队列中的第一条消息。</p>
+<p>•&gt;0 - 若msgflg参数不包含MSG_EXCEPT位，则返回消息队列中第一个类型为msgtyp的消息；若msgflg参数包含MSG_EXCEPT位，则返回消息队列中第一个类型不为msgtyp的消息。</p>
+<p>•&lt;0 - 返回消息队列中类型小于等于msgtyp的绝对值的消息。若有多个，则取类型最小者。</p>
+<p>•E. 若消息队列中有可接收消息，则此函数会将该消息移出消息队列并立即返回0，表示接收成功，否则此函数会阻塞，直到消息队列中有可接收消息为止。</p>
+<h2 id="从消息队列接受消息2"><a href="#从消息队列接受消息2" class="headerlink" title="从消息队列接受消息2"></a>从消息队列接受消息2</h2><p>•F. 若msgflg参数包含IPC_NOWAIT位，  则当消息队列中没有可接收消息时，此函数不会阻塞，  而是返回-1，errno为ENOMSG。</p>
+<p>•成功返回所接收到的消息数据的字节数，失败返回-1。</p>
+<h2 id="销毁-控制消息队列msgctl"><a href="#销毁-控制消息队列msgctl" class="headerlink" title="销毁/控制消息队列msgctl"></a>销毁/控制消息队列msgctl</h2><p>•int msgctl (int msqid, int cmd, struct msqid_ds* buf);</p>
+<p>•cmd取值：IPC_STAT - 获取消息队列的属性，通过buf参数输出。IPC_SET - 设置消息队列的属性，通过buf参数输入，</p>
+<p>–msqid_ds::msg_perm.uid  msqid_ds::msg_perm.gid  msqid_ds::msg_perm.mode  msqid_ds::msg_qbytes</p>
+<p>•IPC_RMID - 立即删除消息队列。此时所有阻塞在对该消息队列的，msgsnd和msgrcv函数调用，都会立即返回失败，errno为EIDRM。</p>
+<p>•成功返回0，失败返回-1。</p>
+<h2 id="销毁-控制消息队列msqid-ds"><a href="#销毁-控制消息队列msqid-ds" class="headerlink" title="销毁/控制消息队列msqid_ds"></a>销毁/控制消息队列msqid_ds</h2><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">struct</span> msqid_ds <span class="token punctuation">{</span>  
+
+–<span class="token keyword">struct</span> ipc_perm msg_perm<span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 权限信息  </span>
+
+–time_t     msg_stime<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 随后发送时间  </span>
+
+–time_t     msg_rtime<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 最后接收时间  </span>
+
+–time_t     msg_ctime<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 最后改变时间  </span>
+
+–<span class="token keyword">unsigned</span> <span class="token keyword">long</span> __msg_cbytes<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//消息队列中的字节数</span>
+
+–msgqnum_t msg_qnum<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 消息队列中的消息数  </span>
+
+–msglen_t msg_qbytes<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//消息队列能容纳最大字节数  </span>
+
+–pid_t      msg_lspid<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 最后发送进程PID  </span>
+
+–pid_t      msg_lrpid<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 最后接收进程PID</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="销毁-控制消息队列"><a href="#销毁-控制消息队列" class="headerlink" title="销毁/控制消息队列"></a>销毁/控制消息队列</h2><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">struct</span> ipc_perm <span class="token punctuation">{</span>  
+
+–key_t     __key<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 键值  </span>
+
+–uid_t     uid<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 有效属主ID  </span>
+
+–gid_t     gid<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 有效属组ID</span>
+
+–uid_t     cuid<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 有效创建者ID  </span>
+
+–gid_t     cgid<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 有效创建组ID  </span>
+
+–<span class="token keyword">unsigned</span> <span class="token keyword">short</span> mode<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 权限字  </span>
+
+–<span class="token keyword">unsigned</span> <span class="token keyword">short</span> __seq<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 序列号</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="2020-10-24"><a href="#2020-10-24" class="headerlink" title="2020.10.24"></a>2020.10.24</h2></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">wangzun233</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://wangzun233.top/2020/10/24/UC%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">https://wangzun233.top/2020/10/24/UC%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://wangzun233.top" target="_blank">WangZun233</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a></div><div class="post_share"><div class="social-share" data-image="http://img.wangzun233.top/63.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2020/09/15/Untitled/"><img class="next_cover lazyload" data-src="http://img.wangzun233.top/63.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Untitled</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2019/10/11/C语言scanf-s踩坑/" title="C语言scanf_s踩坑"><img class="relatedPosts_cover lazyload"data-src="http://img.wangzun233.top/2020/04/02/d3d30e977dc19.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2019-10-11</div><div class="relatedPosts_title">C语言scanf_s踩坑</div></div></a></div><div class="relatedPosts_item"><a href="/2019/12/22/C语言重点理论整理/" title="C语言重点理论整理"><img class="relatedPosts_cover lazyload"data-src="http://img.wangzun233.top/2020/04/02/d3d30e977dc19.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2019-12-22</div><div class="relatedPosts_title">C语言重点理论整理</div></div></a></div><div class="relatedPosts_item"><a href="/2020/03/30/竞赛c-基础知识/" title="竞赛c++基础知识"><img class="relatedPosts_cover lazyload"data-src="http://img.wangzun233.top/2020/03/30/1abbbe01823a2.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-30</div><div class="relatedPosts_title">竞赛c++基础知识</div></div></a></div><div class="relatedPosts_item"><a href="/2019/12/17/next主题优化/" title="next主题优化"><img class="relatedPosts_cover lazyload"data-src="http://img.wangzun233.top/2020/04/02/d3d30e977dc19.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2019-12-17</div><div class="relatedPosts_title">next主题优化</div></div></a></div><div class="relatedPosts_item"><a href="/2020/02/09/lsky-图库/" title="lsky 图库"><img class="relatedPosts_cover lazyload"data-src="http://img.wangzun233.top/2020/02/09/73b074078fac0.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-02-09</div><div class="relatedPosts_title">lsky 图库</div></div></a></div><div class="relatedPosts_item"><a href="/2020/09/14/算法总结（持续更新）/" title="算法总结（持续更新）"><img class="relatedPosts_cover lazyload"data-src="http://img.wangzun233.top/65.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-09-14</div><div class="relatedPosts_title">算法总结（持续更新）</div></div></a></div></div><div class="clear_both"></div></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By wangzun233</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script></body></html>
