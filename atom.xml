@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wangzun233.top/"/>
-  <updated>2020-12-07T06:43:19.715Z</updated>
+  <updated>2020-12-07T06:47:00.213Z</updated>
   <id>https://wangzun233.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://wangzun233.top/2020/12/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A002-%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B/"/>
     <id>https://wangzun233.top/2020/12/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A002-%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B/</id>
     <published>2020-12-07T06:35:49.000Z</published>
-    <updated>2020-12-07T06:43:19.715Z</updated>
+    <updated>2020-12-07T06:47:00.213Z</updated>
     
     <summary type="html">
     
@@ -36,6 +36,12 @@
     </summary>
     
     
+      <category term="机器学习" scheme="https://wangzun233.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="机器学习" scheme="https://wangzun233.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
