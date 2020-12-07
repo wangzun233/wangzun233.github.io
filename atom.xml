@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wangzun233.top/"/>
-  <updated>2020-11-21T02:42:07.551Z</updated>
+  <updated>2020-12-07T06:32:23.703Z</updated>
   <id>https://wangzun233.top/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习01_数据集</title>
+    <link href="https://wangzun233.top/2020/12/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A001-%E6%95%B0%E6%8D%AE%E9%9B%86/"/>
+    <id>https://wangzun233.top/2020/12/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A001-%E6%95%B0%E6%8D%AE%E9%9B%86/</id>
+    <published>2020-12-07T06:25:52.000Z</published>
+    <updated>2020-12-07T06:32:23.703Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;数据集&quot;&gt;&lt;a href=&quot;#数据集&quot; class=&quot;headerlink&quot; title=&quot;数据集&quot;&gt;&lt;/a&gt;数据集&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;sklearn&lt;/li&gt;
+&lt;li&gt;kaggle&lt;/li&gt;
+&lt;li&gt;uci&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="https://wangzun233.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="机器学习" scheme="https://wangzun233.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>机器学习的种类</title>
@@ -542,36 +576,6 @@
 &lt;p&gt;每次滑动窗口向右移动一个位置。&lt;/p&gt;
 &lt;p&gt;以下是一个例子：&lt;/p&gt;
 &lt;p&gt;该数组为[1 3
-        
-      
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="https://wangzun233.top/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="数据结构" scheme="https://wangzun233.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>算法-单调栈！</title>
-    <link href="https://wangzun233.top/2020/04/12/%E7%AE%97%E6%B3%95-%E5%8D%95%E8%B0%83%E6%A0%88%EF%BC%81/"/>
-    <id>https://wangzun233.top/2020/04/12/%E7%AE%97%E6%B3%95-%E5%8D%95%E8%B0%83%E6%A0%88%EF%BC%81/</id>
-    <published>2020-04-12T14:14:40.000Z</published>
-    <updated>2020-06-15T10:05:41.882Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;单调栈&quot;&gt;&lt;a href=&quot;#单调栈&quot; class=&quot;headerlink&quot; title=&quot;单调栈&quot;&gt;&lt;/a&gt;单调栈&lt;/h3&gt;&lt;p&gt;给定一个长度为N的整数数列，输出每个数左边第一个比它小的数，如果不存在则输出-1。&lt;/p&gt;
-&lt;h4 id=&quot;输入格式&quot;&gt;&lt;a
         
       
     
