@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wangzun233.top/"/>
-  <updated>2020-12-07T06:47:00.213Z</updated>
+  <updated>2020-12-17T04:46:00.063Z</updated>
   <id>https://wangzun233.top/</id>
   
   <author>
@@ -15,6 +15,68 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>UC代码汇总</title>
+    <link href="https://wangzun233.top/2020/12/17/UC%E4%BB%A3%E7%A0%81%E6%B1%87%E6%80%BB/"/>
+    <id>https://wangzun233.top/2020/12/17/UC%E4%BB%A3%E7%A0%81%E6%B1%87%E6%80%BB/</id>
+    <published>2020-12-17T04:41:09.000Z</published>
+    <updated>2020-12-17T04:46:00.063Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;pid&quot;&gt;&lt;a href=&quot;#pid&quot; class=&quot;headerlink&quot; title=&quot;pid&quot;&gt;&lt;/a&gt;pid&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-c++&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C语言" scheme="https://wangzun233.top/categories/C%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="C语言" scheme="https://wangzun233.top/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UC课程笔记</title>
+    <link href="https://wangzun233.top/2020/12/17/UC%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
+    <id>https://wangzun233.top/2020/12/17/UC%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-12-17T04:41:09.000Z</published>
+    <updated>2020-12-17T04:45:56.988Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;内存管理&quot;&gt;&lt;a href=&quot;#内存管理&quot; class=&quot;headerlink&quot; title=&quot;内存管理&quot;&gt;&lt;/a&gt;内存管理&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;整数页为4096 = 4K&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;h3 id=&quot;进程和程序&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C语言" scheme="https://wangzun233.top/categories/C%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="C语言" scheme="https://wangzun233.top/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>机器学习02_特征工程</title>
@@ -105,33 +167,6 @@
       <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="机器学习" scheme="https://wangzun233.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UC课程笔记</title>
-    <link href="https://wangzun233.top/2020/10/24/UC%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
-    <id>https://wangzun233.top/2020/10/24/UC%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/</id>
-    <published>2020-10-24T02:04:42.205Z</published>
-    <updated>2020-10-24T02:27:08.750Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;内存管理&quot;&gt;&lt;a href=&quot;#内存管理&quot; class=&quot;headerlink&quot; title=&quot;内存管理&quot;&gt;&lt;/a&gt;内存管理&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;整数页为4096 = 4K&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;h3 id=&quot;进程和程序&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
     
   </entry>
   
@@ -542,35 +577,6 @@
           &lt;h3 id=&quot;Trie树&quot;&gt;&lt;a href=&quot;#Trie树&quot; class=&quot;headerlink&quot; title=&quot;Trie树&quot;&gt;&lt;/a&gt;Trie树&lt;/h3&gt;&lt;p&gt;维护一个字符串集合，支持两种操作：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;“I
-        
-      
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="https://wangzun233.top/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="数据结构" scheme="https://wangzun233.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>算法-KMP字符串！！！！</title>
-    <link href="https://wangzun233.top/2020/04/14/%E7%AE%97%E6%B3%95-KMP%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81/"/>
-    <id>https://wangzun233.top/2020/04/14/%E7%AE%97%E6%B3%95-KMP%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81/</id>
-    <published>2020-04-14T11:24:55.000Z</published>
-    <updated>2020-06-15T10:07:04.814Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;KMP字符串&quot;&gt;&lt;a href=&quot;#KMP字符串&quot; class=&quot;headerlink&quot;
         
       
     
