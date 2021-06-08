@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wangzun233.top/"/>
-  <updated>2020-12-23T14:08:32.046Z</updated>
+  <updated>2021-06-08T12:36:10.086Z</updated>
   <id>https://wangzun233.top/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>00.uboot烧写</title>
+    <link href="https://wangzun233.top/2021/06/08/uboot%E7%83%A7%E5%86%99/"/>
+    <id>https://wangzun233.top/2021/06/08/uboot%E7%83%A7%E5%86%99/</id>
+    <published>2021-06-08T12:30:19.000Z</published>
+    <updated>2021-06-08T12:36:10.086Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;虚拟机设置为静态ipv4地址&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置虚拟机为桥接模式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;虚拟机-编辑-编辑虚拟机网络-选中要进行连接的网卡&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将uboot通过软件烧如TF卡&lt;/p&gt;
+&lt;/li&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C语言" scheme="https://wangzun233.top/categories/C%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="ARM" scheme="https://wangzun233.top/tags/ARM/"/>
+    
+      <category term="Linux嵌入式" scheme="https://wangzun233.top/tags/Linux%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>机器学习15_无监督学习 K-means算法</title>
@@ -580,33 +619,6 @@
       <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="数据结构" scheme="https://wangzun233.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阿里云ECS训练营进阶班——Day07</title>
-    <link href="https://wangzun233.top/2020/06/28/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E8%AE%AD%E7%BB%83%E8%90%A5%E8%BF%9B%E9%98%B6%E7%8F%AD%E2%80%94%E2%80%94Day07/"/>
-    <id>https://wangzun233.top/2020/06/28/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E8%AE%AD%E7%BB%83%E8%90%A5%E8%BF%9B%E9%98%B6%E7%8F%AD%E2%80%94%E2%80%94Day07/</id>
-    <published>2020-06-28T08:10:07.000Z</published>
-    <updated>2020-07-01T09:41:55.868Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;阿里云进阶训练营–day07&quot;&gt;&lt;a href=&quot;#阿里云进阶训练营–day07&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="学习日记" scheme="https://wangzun233.top/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/"/>
-    
-    
-      <category term="日记" scheme="https://wangzun233.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
