@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wangzun233.top/"/>
-  <updated>2021-06-08T12:36:10.351Z</updated>
+  <updated>2021-06-09T01:58:37.727Z</updated>
   <id>https://wangzun233.top/</id>
   
   <author>
@@ -17,11 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>01.Ubuntu虚拟机 ckermit串口监视器安装</title>
+    <link href="https://wangzun233.top/2021/06/09/01-Ubuntu%E8%99%9A%E6%8B%9F%E6%9C%BA-ckermit%E4%B8%B2%E5%8F%A3%E7%9B%91%E8%A7%86%E5%99%A8%E5%AE%89%E8%A3%85/"/>
+    <id>https://wangzun233.top/2021/06/09/01-Ubuntu%E8%99%9A%E6%8B%9F%E6%9C%BA-ckermit%E4%B8%B2%E5%8F%A3%E7%9B%91%E8%A7%86%E5%99%A8%E5%AE%89%E8%A3%85/</id>
+    <published>2021-06-09T01:56:28.000Z</published>
+    <updated>2021-06-09T01:58:37.727Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo aptitude install ckermit&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="嵌入式" scheme="https://wangzun233.top/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    
+      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="ARM" scheme="https://wangzun233.top/tags/ARM/"/>
+    
+      <category term="Linux嵌入式" scheme="https://wangzun233.top/tags/Linux%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>00.uboot烧写</title>
     <link href="https://wangzun233.top/2021/06/08/uboot%E7%83%A7%E5%86%99/"/>
     <id>https://wangzun233.top/2021/06/08/uboot%E7%83%A7%E5%86%99/</id>
     <published>2021-06-08T12:30:19.000Z</published>
-    <updated>2021-06-08T12:36:10.351Z</updated>
+    <updated>2021-06-09T01:56:46.038Z</updated>
     
     <summary type="html">
     
@@ -44,7 +78,7 @@
     </summary>
     
     
-      <category term="C语言" scheme="https://wangzun233.top/categories/C%E8%AF%AD%E8%A8%80/"/>
+      <category term="嵌入式" scheme="https://wangzun233.top/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
     
       <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
@@ -584,41 +618,6 @@
       <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="机器学习" scheme="https://wangzun233.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>算法总结（持续更新）</title>
-    <link href="https://wangzun233.top/2020/09/14/%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
-    <id>https://wangzun233.top/2020/09/14/%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</id>
-    <published>2020-09-14T01:10:40.000Z</published>
-    <updated>2020-09-14T01:15:14.620Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;在c++当中为了区别和C语言相同的标准库，c++的标准库都用c开头   C语言都用.h结尾&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;优化cin读入速度&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&quot;line-numbers
-        
-      
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="https://wangzun233.top/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="笔记" scheme="https://wangzun233.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="数据结构" scheme="https://wangzun233.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
